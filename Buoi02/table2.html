@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table các thuộc tính</title>
+    <style>
+        table,td,th{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Table các thuộc tính</h1>
+    <Table border="1" width="90%" cellspacing = "0" cellpadding = "5">
+        <thead>
+            <!-- Vùng tiêu đề -->
+            <!-- rowspan="2" gộp 2 hàng
+            colspan="3" gộp 2 cột -->
+            <tr>
+                <th rowspan="2">STT</th>
+                <th rowspan="2">Name</th>
+                <th colspan="3">Điểm</th>
+            </tr>
+            <tr>
+                <th>Toán</th>
+                <th>Văn</th>
+                <th>Anh</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Vùng nội dung -->
+            <tr>
+                <td>01</td>
+                <td>Hưởng</td>
+                <td>10</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>Hưởng</td>
+                <td>10</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <!-- Vùng thống kê bảng  -->
+            <th colspan="2">Trung bình</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tfoot>
+    </Table>
+</body>
+</html>
