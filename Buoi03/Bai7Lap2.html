@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiết kế Form</title>
+</head>
+<body>
+        <h2 style="text-align: left; padding-left: 110px;">WuFoo</h2>
+        <form action="" style="width: 60%;">
+            <table align="center">
+                <tr>
+                    <td colspan="2">To Do List
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label for="item">Item</label><br><input style="width:100%;" type="text" name="item" id="item"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label for="mota">Description</label><br><Textarea style="width:100%;" name="mt" id="mota"></Textarea></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="priotity">Priotity</label>
+                        <br>
+                        <select name="pri" id="priotity" style="width: 90%;">
+                            <option value="">low</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="category">Category</label>
+                        <br>
+                        <select name="cate" id="category" style="width: 500px;">
+                            <option value="">personal</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1"><label for="">Due Date</label><br>
+                        <input style="width:20%;" type="text" name="mm" id="mm" >/
+                        <input style="width:20%;" type="text" name="dd" id="dd" >/
+                        <input style="width:40%;" type="text" name="yyyy" id="yyyy" ><br>
+                        <span style="margin: 10px;">MM</span>
+                        <span style="margin: 26px;">DD</span>
+                        <span style="margin: 36px;">YY</span>
+                    </td>
+                        
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="status">status</label>
+                        <br>
+                        <input type="checkbox" name="status" id="status">Done
+                    </td>
+                </tr>
+               
+                <tr>
+                    <td colspan="2"><input type="submit" name="sub" id="sub"></td>
+                    
+                </tr>
+            </table>
+        </form>
+   
+</body>
+</html>

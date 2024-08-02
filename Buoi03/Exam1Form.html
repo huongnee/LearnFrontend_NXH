@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/Buoi03/Exam2Form.html" method="GET" enctype="multipart/form-data" >
+        <table>
+            <tr>
+                <td> <label for="">User name</label> </td>
+                <td> <input type="text" id="us" name="tk" > </td>
+            </tr>
+            <tr>
+                <td> <label for="">PassWord</label> </td>
+                <td> <input type="password" id="pw" name="mk"> </td>
+            </tr>
+            <tr>
+                <td> <label for="">Number</label> </td>
+                <td> <input type="number" id="diem" name="mark"> </td>
+            </tr>
+            <tr>
+                <td> <label for="">Tell</label> </td>
+                <td> <input type="tel" id="sdt" name="sodt"> </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" name="mail" id ="mail">
+                </td>
+            </tr>
+            <tr>
+                <td>giới tính</td>
+                <td> 
+                    <!-- for theo id -->
+                <label for="nam">Nam</label> 
+                 <input type="radio" id="nam" name="gt">
+                 <label for="nu">Nữ</label>
+                 <input type="radio" id="nu" name="gt">
+                </td>
+            </tr>
+            <tr>
+                <td>Sở thích</td>
+                <td>
+                <label for="truyen">Truyện</label> 
+                 <input type="checkbox" id="truyen" name="st">
+                 <label for="phim">Phim</label>
+                 <input type="checkbox" id="phim" name="st">
+                </td>
+            </tr>
+            <tr>
+                <td>Ngày sinh</td>
+                <td>
+                    <input type="date" name="ngaysinh" id="ns">
+                    <input type="datetime" name="ngaysinh" id="ns1">
+                    <input type="datetime-local" name="ngaysinh" id="ns2">
+                    <input type="month" name="thang" id="ns3">
+                    <input type="week" name="tuan" id="ns4">
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>Input ẩn hidden</td>
+                <td> <input type="hidden" name ="id" id ="id">ẩn giá trị nhưng vẫn gửi khi submit</td>
+            </tr>
+            <tr>
+                <td>File</td>
+                <td>
+                    <input type="file" name="file" id ="file">
+                </td>
+            </tr>
+            <tr>
+                <td>Image</td>
+                <td>
+                    <input type="image" src="" name="img" id ="img">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Demo range</td>
+                <td>
+                    <input type="range" name="range" id="range" min="0" max="100">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Thành phố</td>
+                <td>
+                    <select name="thanhpho" id="thanhpho">
+                        <option value="HN">Hà Nội</option>
+                        <option value="HP">Hải Phòng</option>
+                        <option value="VP">Vĩnh Phúc</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td>
+                    <input type="color" name ="color" id="clr">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Submit/Button</td>
+                <td>
+                    <input type="submit" id ="sub" name="sub" value="Nộp">
+                    <input type="button" id ="but" name = "but" value="Gửi">
+                    <input type="reset" id ="rs" name="rs" value="Reset">
+                </td>
+                
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
