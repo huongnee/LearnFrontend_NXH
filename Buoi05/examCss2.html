@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tương tác với thẻ HTML</title>
+    <style>
+        h2{
+            background-color: aqua;
+        }
+        #zo2{
+            background-color: rgb(215, 116, 116);
+        }
+        .zo3{
+            background-color: deepskyblue;
+        }
+        /* Tương tác với tên thuộc tính */
+        input[type='text']{
+            border: 1px solid red !important;
+        }
+        h4[class='zo33']{
+            color: rgb(42, 165, 61);
+        }
+    </style>
+</head>
+<body>
+    <!-- Tương tác với thẻ tên html -->
+    <div id="zo1">
+        <h2>
+            Tương tác với tên thẻ html
+        </h2>
+    </div>
+    <!-- Tương tác với id -->
+    <div id="zo2">
+        <h3>Tương tác với id</h3>
+    </div>
+    <!-- Tương tác với tên class -->
+    <div class="zo3">
+        <h4 class="zo33">Tương tác với class</h4>
+    </div>
+    <!-- Tương tác với tên thuộc tính -->
+    <div id="o4">
+        <label for="us">UserName</label>
+        <input type="text" name="us" id="us">
+        <br>
+        <label for="pass">Passwrod</label>
+        <input type="password" name="pass" id="pass">
+        <br>
+        <label for="age">Age</label>
+        <input type="text" name="age" id="age">
+    </div>
+</body>
+</html>

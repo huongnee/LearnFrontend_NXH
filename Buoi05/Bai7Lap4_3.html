@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7 lap4_3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 250px;
+            color: white;
+            background-color: pink;
+        }
+        h2{
+            color: green;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        h5{
+            text-align: right;
+        }
+        table,th,td,tr{
+            border: 1px solid black;
+        }
+        header,section,footer{
+            margin-top: 15px;
+        }
+        label{
+            color: brown;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Girl Develop It</h1>
+        <h5>don't be shy.develop it</h5>
+    </header>
+    <section>
+        <div class="container">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+               Ipsum itaque quasi impedit hic ipsa assumenda amet nesciunt natus, <br>
+               veritatis accusamus, totam commodi laudantium, <br>
+               deleniti pariatur nostrum error non magnam unde!</p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2>Our location</h2>
+            <ul style="margin-left: 15px;">
+                <li style="margin-left: 15px;">USA
+                    <ul style="margin-left: 15px;">
+                        <li><a href="#">New York</a></li>
+                        <li><a href="#">Columbus</a></li>
+                        <li><a href="#">Austin</a></li>
+                        <li><a href="#">Philly</a></li>
+                    </ul>
+                </li>
+            </ul> 
+            <ul style="margin-left: 15px;">
+                <li style="margin-left: 15px;">World
+                    <ul style="margin-left: 15px;">
+                        <li><a href="#">Ottawa</a></li>
+                        <li><a href="#">Sdney</a></li>
+                    </ul>
+                </li>
+            </ul> 
+        </div>
+    </section>
+    <section>
+        <h2>Upcoming Classes</h2>
+        <table>
+            <thead>
+               <tr>
+                <th>location</th>
+                <th>topic</th>
+               </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>New York</td>
+                    <td>Jquery</td>
+                </tr>
+                <tr>
+                    <td>San-Fran</td>
+                    <td>HTML & CSS</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <div class="container">
+            <h2>Sign up !</h2>
+            <form action="">
+                <label for="">name</label>
+                <input type="text" name="" id="" value="">
+                <br>
+                <label for="">email</label>
+                <input type="text" name="" id="" value="">
+                <br>
+                <label for="">Location</label>
+                <select name="" id="">
+                    <option value="san fans">San fans</option>
+                </select>
+                <fieldset style="width: 300px;">
+                    <legend>
+                        Gender
+                    </legend>
+                    <label for="nu">female</label>
+                    <input type="radio" name="gt" id="nu">
+                    <label for="nam">male</label>
+                    <input type="radio" name="gt" id="nam">
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <label for="">Experience</label>
+            <br>
+            <textarea name="" id="" cols="15" rows="2"></textarea>
+            <br>
+            <input type="submit" name="" id="" value="sign up">
+        </div>
+    </section>
+    <footer>
+        <a href="#">twitter|</a><a href="#">Facebook|</a><a href="#">Flickr</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lap04_1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        ul li{
+            list-style: none;
+            padding: 1rem;
+        }
+        .menu-1{
+            position: relative;
+        }
+        .no1 li a{
+            text-decoration: none;
+            color: rgb(222, 227, 231);
+        }
+        .menu-1>ul{
+            display: flex;
+        }
+        .menu-1>ul>li>a:hover{
+            color: green;
+        }
+        .menu-2{
+            position: absolute;
+            display: none;
+            top:100%;
+            left: 200px;
+            background-color: black;
+        }
+        .menu-1{
+            background-color: black;
+        }
+        .menu-1>ul>li:hover .menu-2{
+            display: block;
+        }
+        .menu-2>ul>li>a{
+             color: white;
+        }
+        .menu-2>ul>li:hover a{
+            color: rgb(27, 183, 27);
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu-1">
+        <ul class="no1">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Dịch vụ</a>
+                <nav class ="menu-2">
+                    <ul>
+                        <li><a href="#">CSS3</a></li>
+                        <li><a href="#">HTML5</a></li>
+                        <li><a href="#">PHP</a></li>
+                    </ul>
+                </nav>
+            </li>
+            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

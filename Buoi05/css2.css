@@ -1,0 +1,46 @@
+/* Bộ chọn * chọn tất cả thành phần html*/
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+/* Bộ chọn tag */
+p{
+    color: brown;
+}
+/* Bộ chọn tag01 tag02 
+    chọn tất cả các thành phần có thẻ tag 02 nằm trong tag 01
+*/
+#zone1 p{
+    background-color: aqua;
+}
+/* Bộ chọn tag01,tag02 
+    chọn tất cả các thành phần có thẻ tag 02 và tag 01
+*/
+h2,h3{
+    font-size: 33px ;
+}
+/* 
+Bộ chọn tag01+tag02
+Chọn tất cả thành phần tag02 đc đặt kế sau tag01
+*/
+p+div{
+    background-color: red;
+}
+/* 
+Bộ chọn tag01>tag02 
+chọn tất cả thành phân tag02 là thẻ con của tag01
+*/
+#zone1>h2{
+    background-color: yellowgreen;
+}
+/* đơn vị
+F8
+em lấy theo thẻ cha ví dụ thẻ cha là 10px thì 1em =10px
+rem lấy theo thẻ html ví dụ html = 5px thi neu 3 rem = 3*5
+onClass
+Đơn vị rem : đi theo thẻ html
++)nếu font-size của trang là 16px thì 1 rem =16px
+Đơn vị em : đi theo thẻ cha
++)Nếu font size của trang là 20px mà của thẻ cha là 5px thì 1em = 5px
+*/

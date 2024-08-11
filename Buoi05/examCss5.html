@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        /* 
+        position:fixed; ==> lấy vị trí theo màn hình
+        position:absolute ==> lấy vị trí theo khối bao sử dụng position:relavtive.absolute bao gần nhất
+        hoặc k có position: relav.abso thì sẽ lấy theo vị trí thẻ html
+        */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            position: relative;
+        }
+        .box2{
+            width: 400px;
+            height: 400px;
+            border: 1px solid blue;
+            position: relative;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box3{
+            width: 300px;
+            height: 300px;
+            border: 1px solid green;
+            position: relative;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Position -->
+    <div class="box1">
+        <div class="box2">
+            <div class="box3">
+                <div class="box4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTapLap04_2</title>
+    <style>
+        nav#navTop{
+            width: 960px;
+            margin: 0 auto;
+            background: #ccc;
+            height: 40px;
+        }
+        nav#navTop ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav#navTop ul li{
+            float: left;
+            border-right: solid 1px #fff;
+        }
+        nav#navTop ul li a{
+            text-decoration: none;
+            display: block;
+            padding: 10px 30px;
+        }
+        nav#navTop ul li a:hover{
+            background: red;
+            color: rgb(215, 208, 208);
+        }
+        
+        nav#navTop ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+        nav#navTop ul li>ul{
+            position: absolute;
+            width: 159px;
+            background: #666;
+        }
+        nav#navTop ul li>ul:hover{
+            position: absolute;
+            width:159px ;
+            background: #666;
+            display: block;
+        }
+        nav#navTop ul li>ul li{
+            border-bottom: solid 1px #fff;
+        }
+        nav#navTop ul li>ul li>ul{
+            margin-left: 159px;
+            margin-top: -40px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navTop">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Sản phẩm</a>
+                    <ul>
+                       <li><a href="#">San pham cap 2</a>
+                        <ul>
+                            <li><a href="#">San pham cap 2</a></li>
+                            <li><a href="#">San pham cap 2</a></li>
+                            <li><a href="#">San pham cap 2</a></li>
+                            <li><a href="#">San pham cap 2</a></li>
+                            <li><a href="#">San pham cap 2</a></li>
+                         </ul>
+                        </li>
+                       <li><a href="#">San pham cap 2</a></li>
+                       <li><a href="#">San pham cap 2</a></li>
+                       <li><a href="#">San pham cap 2</a></li>
+                       <li><a href="#">San pham cap 2</a></li>
+                    </ul>
+            </li>
+            <li><a href="#">dịch vụ</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

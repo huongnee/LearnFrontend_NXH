@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+    <style>
+        .tkw{
+            height: 20px;
+            background-color: rgb(127, 255, 163);
+        }
+    </style>
+</head>
+<body>
+    <div id="progress" style="border: 1px solid black;width: 300px;padding-left: 5px;">
+        <div class="container">
+            Thiết kế giao diện web <br> <progress id="web" class="tkw" value="90" max="100"></progress>
+        </div>
+        <div class="container">
+            Phân tích sơ đồ thực thể <br> <progress id="web1" class="tkw" value="50" max="100"></progress>
+        </div>
+        <div class="container">
+            Viết tài liệu phân tích thiết kế  <br><progress id="web2" class="tkw" value="30" max="100"></progress>
+        </div>
+    </div>
+    <div id="danhsach" style="border: 1px solid black;width: 300px;padding-left: 5px;">
+        <div class="container">
+            <input type="text" name="ds" id="ds" list="lc">
+            <datalist id="lc">
+                <option value="Làm việc với js"></option>
+                <option value="Làm việc với html"></option>
+                <option value="Làm việc với css"></option>
+                <option value="Làm việc với java"></option>
+            </datalist>
+        </div>
+    </div>
+</body>
+</html>

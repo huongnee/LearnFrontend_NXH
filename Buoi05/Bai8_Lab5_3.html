@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        nav{
+            padding-left: 60px;
+            background-color: green;
+        }
+        ul{
+            list-style: none;
+            background-color: green;
+            /* Cho lên trên */
+            display: flex; 
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        ul li{
+             padding: 1rem; 
+            /* padding: 1rem 2rem 3rem 4rem; */
+            position: relative;
+        }
+        ul li:hover a{
+            color: aqua;
+        }
+        .menu-2{
+            /* dùng none thì bỏ 2 dòng dưới */
+            display: block;
+            visibility: hidden;
+            position: absolute;
+            /* display: none; */
+            top: 100%;
+            left: 0;
+        }
+        ul li:hover .menu-2{
+            visibility: visible;
+            color: aliceblue;
+            /* display: block; */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</li>
+            <li>
+                <a href="#">Products</a>
+                <ul class="menu-2">
+                    <li>Táo</li>
+                    <li>Dưa</li>
+                    <li>Đào</li>
+                    <li>Bưởi</li>
+                    <li>Cam</li>
+                </ul>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

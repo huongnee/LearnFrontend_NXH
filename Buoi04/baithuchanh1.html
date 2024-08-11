@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chia khối devmaster</title>
+    <style>
+       #header{
+        border: 1px solid black;
+       }
+       .upper{
+        text-transform: uppercase;
+       }
+       .bold{
+        font-weight: bold;
+       }
+       #header>.container,#logo-header,#phone-header{
+        display:flex;
+        /* justify-content: space-between; */
+       }
+       ul{
+        display: flex;
+       }
+       ul,li{
+        list-style:none;
+        padding: 1rem;
+       }
+       a{
+        text-decoration: none;
+       }
+       section h3>span{
+        color: red;
+       }
+       .list-khoa-hoc{
+        display: flex;
+       
+       }
+       .box-khoa-hoc{
+        height: 20rem;
+        width: 20rem;
+        border: 1px solid black;
+        margin: auto;
+       }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <div class="container">
+            <div id="logo-header">
+                <img src="https://devmaster.edu.vn/images/logo.png" alt="ảnh logo">
+            </div>
+            <div>
+                <p class ="upper bold">Viện công nghệ và đào tạo devmaster</p>
+                <p>Đào tạo - Phần mềm - Nhân sự</p>
+            </div>
+            <div id="phone-header">
+                <div>
+                    <a href="#tel">09839392</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--  -->
+    <!-- menu -->
+    <nav id="nav">
+        <div class="container">
+            <ul>
+                <li>Trang chủ</li>
+                <li>Sản phẩm</li>
+                <li>Liên hệ</li>
+                <li>giới thiệu</li>
+                <li>liên kết</li>
+            </ul>
+        </div>
+    </nav>
+    <!-- banner -->
+    <section id="banner">
+        <div class="box-banner">
+            <img src="https://devmaster.edu.vn/uploads/images/devmaster-campaign/devmaster-lap-trinh-asp-net-mvc-5-webapi-angularjs.jpg" alt="mau">
+        </div>
+    </section>
+    <!-- Các khóa học -->
+    <section id="khoahoc">
+        <div class="container">
+            <h3 class="upper">Các khóa học <span>chuyên đề</span> </h3>
+            <div class="list-khoa-hoc" style="display: flex;">
+                <div class="box-khoa-hoc">
+
+                </div>
+                <div class="box-khoa-hoc">
+                    
+                </div>
+                <div class="box-khoa-hoc">
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="lichhoc">
+        <div class="container">
+            <h3 class="upper">Lịch <span>khai giảng</span> </h3>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="thong-tin">
+
+            </div>
+            <div class="cac-khoa">
+
+            </div>
+            <div class="map">
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

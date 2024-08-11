@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .none{
+            width: 600px;
+            height: 30px;
+            display: flex;
+            position: relative;
+        }
+        ul li{
+            width:150px ;
+            list-style: none;
+            text-align: center;
+            background-color: rgb(141, 133, 133);
+        }
+        li.no1,li.no2{
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-right: 1.5px solid red;
+        }
+        ul li:hover{
+            /* background-color: green; */
+        }
+        .no3{
+            width: 50vw;
+            display: none;
+            position: absolute;
+            top:100%;
+           
+        }
+        ul li:hover .no3{
+            display: block;
+        }
+        .no3 li:hover{
+            color: aliceblue;
+            background-color: green;
+        }
+        .none li:hover{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="none" >
+            <li class="no1">Trang chủ</li>
+            <li class="no1">Khóa học
+                <ul class="no3">
+                    <li style="width: 200px;height: 30px;text-align: left;">Lập trình web php và mysql</li>
+                    <li style="width: 200px;height: 30px;text-align: left;">Lập trình web Netcore</li>
+                    <li style="width: 200px;height: 30px;text-align: left;">Lập trình web java SpringBoot</li>
+                </ul>
+            </li>
+            <li class="no1">Dịch vụ</li>
+            <li class="no1">Hỗ trợ</li>
+            <li class="no2">Liên hệ</li>
+        </ul>
+    </nav>
+</body>
+</html>

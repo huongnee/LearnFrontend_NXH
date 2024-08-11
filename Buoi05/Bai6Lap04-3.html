@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6 Lap4-3</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        
+        .menu{ 
+            position: relative;
+            width: 17vw;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid red;
+        }
+        .sub-menu{
+           
+        }
+        menu>ul{
+            list-style: none;
+        }
+        a{
+            width: 50px;
+            text-decoration: none;
+            color: black;
+        }
+        .icon1{
+        height: 11px;
+        color: aqua;
+       }
+       .menu>ul>li{
+        padding: 0.4rem;
+       }
+      .menu-2{
+        padding-top: 15px;
+        width: 500px;
+        height: 270px;
+        border: 1px solid rgb(20, 3, 3);;
+        display: none;
+        position: absolute;
+        left:100%;
+        top: 10px;
+      }
+      ul>li:hover .menu-2{
+        display: block;
+        display: flex;
+      }
+      .sub-menu>ul>li{
+        width: 200px;
+      }
+      h4{
+        width: 200px;
+      }
+      .menu>ul>li:hover{
+        background-color: red;
+      }
+       .menu>ul>li>a:hover{
+        color: rgb(233, 227, 227) ;
+      }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="#"><box-icon type='logo' name='graphql' class="icon1"></box-icon> Điện máy</a></li>
+            <li><a href="#"><box-icon type='logo' name='graphql' class="icon1"></box-icon> Đồ gia dụng</a></li>
+            <li><a href="#"><box-icon type='logo' name='graphql' class="icon1"></box-icon> Công cụ & dụng cụ <box-icon name='chevron-right' type='solid' color='#8c4343' style="height: 20px; padding-top: 5px;" ></box-icon></a>
+                <nav class="menu-2">
+                    <div class="sub-menu" style="margin-right: 25px;margin-left: 15px;">
+                        <h4>Máy khoan</h4>
+                        <ul>
+                            <li><a href="#"> Máy khoan pin</a></li>
+                            <li><a href="#"> Máy khoan động lực</a></li>
+                            <li><a href="#"> Máy khoan bê tông,máy khoan búa</a></li>
+                            <li><a href="#"> Máy đục bê tông</a></li>
+                            <li><a href="#"> Máy khoan cầm tay gia đình</a></li>
+                            <li><a href="#"> Máy khoan mini</a></li>
+                            <li><a href="#"> Máy khoan rút lõi bê tông</a></li>
+                            <li><a href="#"> Máy khoan góc</a></li>
+                            <li><a href="#"> Máy khoan bàn</a></li>
+                            <li><a href="#"> Máy khoan từ</a></li>
+                        </ul>
+                    </div>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#"> Máy bơm nước chạy dầu</a></li>
+                            <li><a href="#"> Máy bơm nước chạy xăng</a></li>
+                            <li><a href="#">Máy gieo hạt</a></li>
+                        </ul>
+                        <h4>Máy hàn điện tử</h4>
+                        <ul>
+                            <li><a href="#">Máy khoan pin</a></li>
+                            <li><a href="#">Máy khoan động lực</a></li>
+                            <li><a href="#">Máy khoan bê tông,máy khoan búa</a></li>
+                            <li><a href="#">Máy đục bê tông</a></li>
+                            <li><a href="#">Máy khoan cầm tay gia đình</a></li>
+                            <li><a href="#">Máy khoan mini</a></li>
+                            <li><a href="#">Máy khoan rút lõi bê tông</a></li>
+                            <li><a href="#">Máy khoan góc</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </li>
+            <li><a href="#"><box-icon type='logo' name='graphql' class="icon1"></box-icon> Y tế & sức khỏe</a></li>
+            <li><a href="#"><box-icon type='logo' name='graphql' class="icon1"></box-icon> Thể thao & ngoài trời</a></li>
+            <li><a href="#"><box-icon type='logo' name='graphql' class="icon1"></box-icon> Thiết bị văn phòng</a></li>
+            <li><a href="#"><box-icon type='logo' name='graphql' class="icon1"></box-icon> Thiết bị số,phụ kiện</a></li>
+            <li><a href="#"><box-icon type='logo' name='graphql' class="icon1"></box-icon> Thiết bị công nghiệp</a></li>
+            <li><a href="#"><box-icon type='logo' name='graphql' class="icon1"></box-icon> Nhà cửa & đời sống</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
