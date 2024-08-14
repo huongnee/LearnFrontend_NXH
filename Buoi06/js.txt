@@ -1,0 +1,75 @@
+Ngôn ngữ lập trình kịch bản JavaScript
+1. Systax
+    - Nhúng/Sử dụng Js trong Html
+2. Các biến , mảng, object trong Js
+ - Biến 
+  + sử dụng var/let/const để khai báo biến
+   + var: khai báo biến toàn cục
+   + let khai báo biến cục bộ
+   + const : khai báo hằng số
+ - Mảng 
+ +,khai báo
+  var tên_biến = [];//khai báo trống r gán
+  var tên_biến = [1,2,3,5,'a','b'];
+  var tên_biến = new Array()//khai báo trống r gán
+  tên_biến[0] =;
+ +,lấy giá trị
+  tên_biến[vị trí]
+  tên_biến
+3. Vòng lặp trong Js
+    - vòng lặp for
+     + for đầy đủ
+     ex: for(i=0;i<n;i++)
+     {
+        logic xử lý
+     }
+     + for khuyết 1 phần
+     ex: for(i=0;i<n;){
+        logic xử lý
+        i++
+     }
+     + for khuyết toàn bộ
+     ex: for(;;){
+        logic xử lý
+        //sử dụng đến các câu lệnh rẽ nhánh và sử dụng bước nhảy để tránh vòng lặp vô hạn
+     }
+     + for không thân
+     ex: for(let i;console.log(i),i++)
+    - vòng lặp while
+     Systax: while
+     while(mệnh đề điều kiên)
+     {
+
+     }
+    - vòng lặp do...while
+    Systax
+    do{
+
+    }while();
+    - forEach(){
+        +,được sử dụng với list object
+    }
+4. Cấu trúc rẽ nhánh
+- if {} else {}
+ + if đơn
+ + if đầy đủ
+ if(){
+
+ }
+ else if()
+ {}
+ else{}
+
+
+- bước nhảy:
++ break
++ continue
++ return
+
+- switch case
+5. Toán tử , toán hạng
+6. DOM,Jquery
+7. Tương tác với HTML
+8. Function
+9. OOP
+

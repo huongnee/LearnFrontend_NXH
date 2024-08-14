@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //khai báo biến
+        //const - hằng số
+        const PI = 3.14;
+        console.log(PI);
+        //không đc khai báo đc lại vs const
+        // PI =2.23;
+        // console.log(PI);
+        // var k đc var x = lại
+        var x = 3;
+        console.log("x :",x);
+        x = "Hehe"
+        console.log("x :",x);
+        // let co thể y =5 lại ở dưới
+        let y = 4;
+        console.log("y :",y);
+        y =x;
+        console.log("y :",y);
+        document.write(y+"<br>"+x)
+        // confirm
+        // var check = confirm("Bạn trên 18 ?");
+        //document.writeln(check)
+        // var name = prompt("Nhập tên của bạn :")
+        //document.write("<br>",name);
+        //if else check
+        let a = 4;
+        //tăng r so sánh
+        if(++a > 4)
+        {
+            document.write("<br>"+"True ne")
+        }
+        let b =4;
+        //so sánh xong mới tăng
+        if(b++ > 4)
+        {
+            document.write("<br>"+"True ne")
+        }
+        //== & === ; == so sánh giống nhau , so sánh cả giá trị vs kiểu dữ liệu
+        document.write("<br>so sánh 3=='3'  ", 3 == '3')
+        document.write("<br>so sánh 3===3  ", 3 === '3')
+
+        document.write("<br>so sánh == số vs chữ", 3 == 'hehe')
+        document.write('<br>')
+        document.write("so sánh == số vs số khác ", 3 == '4')
+        document.write('<br>')
+        // toán tử logic !,&&,or
+        //! phủ định
+        var check1 = true;
+        document.write(!check1)
+        // && lệnh end
+
+        var z = 9;
+        if(z > 1 && z >8)
+        {
+         document.write("<br>ok");
+        }
+        //toán tử gán
+        var num = 6+3;
+        var ok ='hhh'
+        num += 6; // num = num + 6
+        document.write("<br>",num)
+        //toán tử đăch biệt --> như if else
+        //(5>3)?document.write("<br>5>3 đúng"):document.write("<br>5>3 là sai");
+        //Typeof --> trả về kdl
+        document.write("<br>"+typeof(ok));
+    </script>
+</body>
+</html>
