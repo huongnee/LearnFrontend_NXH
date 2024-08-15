@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            width: 30vw;
+        }
+    </style>
+</head>
+<body>
+    <head>
+        <h2>Login Information</h2>
+        <hr>
+    </head>
+    <section>
+        <div class="container">
+        <form action="" name="formne">
+            <table>
+                <tr>
+                    <td>User name</td>
+                    <td><input type="text" name="us" id=""></td>
+                </tr>
+                <tr>
+                    <td>PassWord</td>
+                    <td><input type="password" name="ps" id=""></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <label for="rem">Remember set</label>
+                        <input type="checkbox" name="" id="rem"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" name="btn-lg" id="" value="Login" onclick="check()">
+                        <input type="reset" name="btn-rs" id="" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </div>
+    </section>
+    <script>
+        function check()
+        {
+            if(formne.us.value =="nxh" && formne.ps.value =="1")
+            {
+                document.write("Đăng nhập thành công!")
+            }
+            else
+            {
+                document.write("Thông tin tài khoản mật khẩu không chính xác")
+            }
+        }
+    </script>
+</body>
+</html>

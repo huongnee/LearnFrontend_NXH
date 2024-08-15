@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function check(){
+            if(myform.age.value < 18){
+                document.write("Ban chua du tuoi chiu trach nhiem");
+            }
+            else
+            {
+                document.write("Ban da du tuoi chiu trach nhiem")
+            }
+        }
+        function losefocus(){
+            if(myform.name.value == "")
+            {
+                alert("Khoong duoc bo trong truong nay");
+                myform.name.focus();
+                return false;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <form action="" name="myform" onchange="losefocus()">
+        <p><h5><i>Enter name:</i></h5>
+        <input type="text" name="name" id="" size="35" onblur="losefocus()"></p>
+        <p><h5><i>Enter age:</i></h5>
+            <input type="text" name="age" id="" size="5">
+        </p>
+        <input type="button" name="" id="" value="check" onclick="check()">
+        <input type="reset"  value="clear" name="" id="">
+    </form>
+</body>
+</html>
