@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        p{
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Kiểm tra dữ liệu nhập vào nếu sai thì in ra màn hình thông báo tại vị trí lỗi -->
+    <!-- Làm form đăng ký cho sinh viên -->
+
+    <form action="" name ="myform" method="post">
+        <div>
+            <label for="us">User</label>
+            <input type="text" name="us" id="us">
+            <p id="errTK">Không được để trống trường này</p>
+        </div>
+        <div>
+            <label for="ps">PassWord</label>
+            <input type="password" name="ps" id="ps">
+            <p id ="errPS">Không được để trống trường này</p>  
+        </div>
+        <div>
+            <label for="rps">Re-PassWord</label>
+            <input type="password" name="rps" id="rps">
+            <p id ="errPS2">Không được để trống trường này</p>  
+        </div>
+        <div>
+            <input type="button" name="" id="" value="Đăng ký" onclick="check()">
+            <input type="reset" name="" id="" value="Reset">
+        </div>
+    </form>
+
+    <script>
+        function check()
+        {
+            if(myform.us.value == ""){
+                document.getElementById("errTK").style.display="block";
+            }
+            if(myform.ps.value == ""){
+                document.getElementById("errPS").style.display="block";
+            }
+            if(myform.rps.value == ""){
+                document.getElementById("errPS2").style.display="block";
+            }
+            if(myform.us.value === "nxh" && myform.ps.value === myform.rps.value){
+                alert("Đăng ký thành công");
+            }
+            else{
+                alert("Đăng ký thất bại");
+            }
+        }
+    </script>
+</body>
+</html>

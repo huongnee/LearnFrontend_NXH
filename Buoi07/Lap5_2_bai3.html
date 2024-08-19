@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lap05-Bài 3</title>
+</head>
+<body>
+    <script>
+        var chan =0,le=0,sumchan=0,sumle=0;
+        var num = parseInt(prompt("Nhập 1 số 2 chữ số bất kỳ : "));
+        for (let index = 1; index <= num; index++) {  
+           if(index%2==0){
+                chan++;
+                sumchan = sumchan+index;
+           }
+           else{
+                le++;
+                sumle = sumle+index;
+           }
+        }
+        document.write("Có tổng cộng ",chan,"số chẵn và tổng của nó là : ",sumchan);
+        document.write("<br>Có tổng cộng ",le,"số le và tổng của nó là : ",sumle);
+
+    </script>
+</body>
+</html>

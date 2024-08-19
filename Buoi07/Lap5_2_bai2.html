@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+<body>
+    <script>
+        var a = prompt("Giải phương trình bậc 2 ax^2 + bx + c = 0 (a!=0) <br> Nhập số a : ");
+        var b = prompt("Nhập số b : ");
+        var c = prompt("Nhập số c : ");
+
+        var delta = b*b - (4*a*c);
+        if(delta < 0)
+        {
+            document.write("Phương trình vô nghiệm !")
+        }
+        else if(delta == 0)
+        {
+            document.write("Phương trình có nghiệm kép : X1 = X2 = ",(-b/(2*a)));
+        }
+        else{
+            document.write("Phương trình có 2 nghiệm phân biệt :<br> X1 = ",(-b-Math.sqrt(delta)/(2*a)) ,"<br> X2 = ",(-b+Math.sqrt(delta)/(2*a)));
+        }
+    </script>
+</body>
+</html>

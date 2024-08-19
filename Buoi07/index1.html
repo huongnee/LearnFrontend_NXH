@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        var a=4,b=5;
+        var result = ++a +b;
+        document.write("Result: ",result,"<br>");
+        document.write("a: ",a,"<br>");
+    
+        a=4;
+        var result = a++ +b;
+        document.write("Result: ",result,"<br>");
+        document.write("a: ",a,"<br>");
+
+        //Mang
+        //Systax khai bao : var ten_mang = new Array();
+        // var ten mang = [];
+
+        var arr =[1,2,3,"hehe","dev"];
+        // laay du lieu
+        //ten_mang[vi_tri]
+        for (let index = 0; index < arr.length; index++) {
+           document.write("<br>",arr[index]);
+        }
+         
+        index = arr.length;
+        while(index>0){
+           document.write("<br>",arr[index-1]);
+            --index;
+        }
+        //valueOf nối chuỗi
+        document.write("<br>",arr.valueOf());
+        //thêm phần tử vào cuối mảng
+        arr.push("okkkkkk");
+        document.write("<br>",arr.valueOf());
+        //thêm vào đầu mảng
+        arr.unshift("toiii");
+        document.write("<br>",arr.valueOf());
+        //xóa đầu
+        arr.pop();
+        document.write("<br>",arr.valueOf());
+        //xóa cuối
+        arr.shift();
+        document.write("<br>",arr.valueOf());
+        var arr2 = ["no","ne"];
+        var res = arr.concat(arr2);
+        document.write("<br>",res.valueOf());
+        //lấy giá trị của mảng từ giá trị 3 đến giá trị 5
+        document.write("<br>Lấy giá trị thứ 3-5 : ", arr.slice(3,5));
+
+        var arr3 =[1,2,3][2,6,3];
+
+   </script> 
+</body>
+</html>

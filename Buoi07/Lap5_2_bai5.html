@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var newText="";
+      var txt = "học lập trình web";
+      document.write("Độ dài cuả chuỗi là : "+ txt.length+"<br />");
+      document.write("Mã char code của từng ký tự: <br />");
+      //duyệt lấy từng ký tự trong chuỗi từ vị trí ở đến hết
+      for(i=0;i<txt.length;i++){
+      if(i==0){
+      newText += txt[i].charCodeAt(0);
+      }else{
+      newText += ","+txt[i].charCodeAt(0);
+      }
+      }
+      document.write("Chuỗi CHarcode :<br />"+newText+'<br />');
+      var arrText = newText.split(",");
+      for(i=0;i<arrText.length;i++){
+      document.write(String.fromCharCode(arrText[i]));
+      }
+    </script>
+  </body>
+</html>

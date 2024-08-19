@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6 lap 5.2</title>
+</head>
+<body>
+    <script>
+        let number = new Array(1,2,3,4,5,6,7,8,9,10);
+        let sumchan = 0,sumle=0;
+        for (let index = 0; index < number.length; index++) {
+            if(number[index]%2==0){
+                
+               sumchan = sumchan + number[index];
+
+           }
+           else{
+            sumle = sumle + number[index];
+               
+           }
+        }
+        document.write("Tổng các số chẵn có trong mảng là : ",sumchan,"<br>")
+        document.write("Tổng các số lẻ có trong mảng là : ",sumle,"<br>")
+
+    </script>
+</body>
+</html>
