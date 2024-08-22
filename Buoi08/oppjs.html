@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Đối tượng
+        //Khai báo đối tượng'
+        //Syntax
+        //Cách 1 : var name_Object = new Object();
+        //Cách 2 : var name_Object = {}
+        var obj1 = new Object();
+        obj1.name = "hehe";
+        obj1.age = "20";
+        console.log(obj1);
+        var obj2 = {
+            //gắn thuộc tính đối tượng/khai báo thuộc tính
+            name : "noname",
+            age : 10
+        };
+        console.log(obj2);
+        //Method in object
+        var obj4 ={
+            info : function(){
+                document.write("no no");
+            }
+        };
+        //gọi đến phương thức của đối tượng
+        obj4.info();
+        //khai báo phương thức đối tượng của object 2
+        obj2.info = function(){
+            document.write("<br>heheh");
+        }
+        obj2.info();
+        //Chú ý
+        //Khai báo trong {} thì sử dụng :
+        //Khai báo ở ngoài thù dùng =
+    </script>
+</body>
+</html>

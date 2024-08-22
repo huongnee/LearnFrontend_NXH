@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .err {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <table width="350">
+        <caption>
+          <h2>Login</h2>
+        </caption>
+        <tr>
+          <td>User Name</td>
+          <td>
+            <input
+              type="text"
+              name="us"
+              id="us"
+              placeholder="Nhập tên đăng nhập"
+            />
+            <br /><label for="" id="errTK"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td>
+            <input
+              type="password"
+              name="ps"
+              id="ps"
+              placeholder="Nhập mật khẩu"
+            />
+            <br /><label for="" id="errPS"></label>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input
+              type="button"
+              name="login"
+              id="login"
+              value="Login"
+              onclick="check()"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      function check() {
+        var user = document.getElementById("us");
+        var pass = document.getElementById("ps");
+        if (user.value == "") {
+          document.getElementById("errTK").innerHTML = "Bạn chưa nhập username";
+          document.getElementById("errTK").className = "err";
+          user.focus();
+        }
+        if (pass.value == "") {
+          document.getElementById("errPS").innerHTML =
+            "Bạn chưa nhập passwword";
+          document.getElementById("errPS").className = "err";
+          pass.focus();
+        }
+      }
+    </script>
+  </body>
+</html>

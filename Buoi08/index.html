@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #errTK,
+      #errPS,
+      #errPS2,
+      #errTK1 {
+        display: none;
+        color: rgb(255, 132, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" name="myform" method="post">
+        <div>
+            <label for="us1">User</label>
+            <input type="text" name="us1" id="us1" />
+            <p id="errTK1">Không được để trống trường này</p>
+          </div>
+      <div>
+        <label for="us">User</label>
+        <input type="text" name="us" id="us" onblur="check()" />
+        <p id="errTK">Không được để trống trường này</p>
+      </div>
+      <div>
+        <label for="ps">PassWord</label>
+        <input type="password" name="ps" id="ps" onblur="check1()" />
+        <p id="errPS">Không được để trống trường này</p>
+      </div>
+      <div>
+        <label for="rps">Re-PassWord</label>
+        <input type="password" name="rps" id="rps" />
+        <p id="errPS2">Không được để trống trường này</p>
+      </div>
+      <div>
+        <input type="button" name="" id="" value="Đăng ký" />
+        <input type="reset" name="" id="" value="Reset" />
+      </div>
+    </form>
+    <script>
+      function check() {
+        var username = document.getElementById("us").value;
+        if (username === "") {
+          var errName = document.getElementById("errTK");
+          errName.style.display = "block";
+        } else {
+          var errName = document.getElementById("errTK");
+          errName.style.display = "none";
+        }
+      }
+      function check1() {
+        var pass = document.getElementById("ps").value;
+        if (pass === "") {
+          var errPass = document.getElementById("errPS");
+          errPass.style.display = "block";
+        } else {
+          var errPass = document.getElementById("errPS");
+          errPass.style.display = "none";
+        }
+      }
+      //cách 2 ko cần gọi , blur có thể thay = các hàm khác
+      document.getElementById("rps").addEventListener("blur", function () {
+        var repass = document.getElementById("rps").value;
+        if (repass === "") {
+          var errPass1 = document.getElementById("errPS2");
+          errPass1.style.display = "block";
+        } else {
+          var errPass1 = document.getElementById("errPS2");
+          errPass1.style.display = "none";
+        }
+      });
+
+      document.getElementById("us1").addEventListener("input", function () {
+        var username1 = document.getElementById("us1").value;
+        var regx = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,6}$/;
+        if (username1 != "" && !regx.test(username1)) {
+          var errName = document.getElementById("errTK1");
+          errName.style.display = "block";
+        } else {
+          var errName = document.getElementById("errTK1");
+          errName.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Ảnh</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="list-cart">
+            <!-- Nơi hiển thị các sản phẩm -->
+        </tbody>
+    </table>
+    <script>
+        // Danh sách sản phẩm trong giỏ hàng
+        var listCart = [
+            {
+                id: 'sp1',
+                name: 'ip15',
+                price: 70000,
+                img: '/img/anhdt.jfif',
+                quantity: 1,
+                status: true
+            },
+            {
+                id: 'sp2',
+                name: 'ip16',
+                price: 700001,
+                img: '/img/anhdt.jfif',
+                quantity: 1,
+                status: true
+            },
+            {
+                id: 'sp3',
+                name: 'ip17',
+                price: 70000,
+                img: '/img/anhdt.jfif',
+                quantity: 1,
+                status: true
+            }
+        ];
+
+        // Hàm để tạo HTML cho một sản phẩm
+        function renderCart(cart) {
+            return `
+                <tr>
+                    <td><img src="${cart.img}" alt="ảnh đt" style="width: 10rem;"></td>
+                    <td>${cart.name}</td>
+                    <td>${cart.price}</td>
+                    <td>
+                        <button class="qty sub-btn" onclick="abtract('${cart.id}')">-</button>
+                        ${cart.quantity}
+                        <button class="qty add-btn" onclick="add('${cart.id}')">+</button>
+                    </td>
+                    <td><button>Xoá</button></td>
+                </tr>`;
+        }
+
+        // Hàm để render danh sách sản phẩm vào bảng
+        function renderListCart(carts) {
+            var cartHTML = '';
+            for (let index = 0; index < carts.length; index++) {
+                cartHTML += renderCart(carts[index]);
+            }
+            document.getElementById("list-cart").innerHTML = cartHTML;
+        }
+
+        // Gọi hàm để hiển thị sản phẩm
+        renderListCart(listCart);
+
+        // Hàm để giảm số lượng sản phẩm
+        function abtract(id) {
+            for (let index = 0; index < listCart.length; index++) {
+                if(id == listCart[index].id) {
+                    if(listCart[index].quantity > 1) { // Đảm bảo số lượng không nhỏ hơn 1
+                        listCart[index].quantity--;
+                    }
+                }
+            }
+            renderListCart(listCart); // Cập nhật lại giao diện sau khi thay đổi
+        }
+
+        // Hàm để tăng số lượng sản phẩm
+        function add(id) {
+            for (let index = 0; index < listCart.length; index++) {
+                if(id == listCart[index].id) {
+                    listCart[index].quantity++;
+                }
+            }
+            renderListCart(listCart); // Cập nhật lại giao diện sau khi thay đổi
+        }
+    </script>
+</body>
+</html>

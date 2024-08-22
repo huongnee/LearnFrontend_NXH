@@ -1,0 +1,27 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .product {
+    /* Định dạng cho từng sản phẩm */
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .page-item {
+    margin: 0 5px;
+  }
