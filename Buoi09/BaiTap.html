@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 8px;
+            text-align: center;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .pagination button {
+            padding: 5px 10px;
+            margin: 0 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .pagination button.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+        .product-info {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Nhập ID sản phẩm">
+    <button onclick="searchProduct()">Tìm kiếm</button>
+
+    <table>
+        <tbody id="list-cart">
+            <!-- Nơi hiển thị các sản phẩm -->
+        </tbody>
+    </table>
+
+    <div class="pagination" id="pagination">
+        <!-- Pagination buttons will be rendered here -->
+    </div>
+
+    <script>
+        var listCart = [
+            { id: 'sp1', name: 'ip15', price: 70000, img: '/img/anhdt.jfif', quantity: 1, status: true },
+            { id: 'sp2', name: 'ip16', price: 700001, img: '/img/ig1.jpg', quantity: 1, status: true },
+            { id: 'sp3', name: 'ip17', price: 70000, img: '/img/ig2.jfif', quantity: 1, status: true },
+            { id: 'sp4', name: 'ip18', price: 70000, img: '/img/anhdt.jfif', quantity: 1, status: true },
+            { id: 'sp5', name: 'ip19', price: 700001, img: '/img/ig1.jpg', quantity: 1, status: true },
+            { id: 'sp6', name: 'ip20', price: 70000, img: '/img/anhdt.jfif', quantity: 1, status: true },
+            { id: 'sp7', name: 'ip21', price: 70000, img: '/img/anhdt.jfif', quantity: 1, status: true },
+            { id: 'sp8', name: 'ip22', price: 700001, img: '/img/anhdt.jfif', quantity: 1, status: true },
+            { id: 'sp9', name: 'ip23', price: 70000, img: '/img/anhdt.jfif', quantity: 1, status: true },
+            { id: 'sp10', name: 'ip24', price: 70000, img: '/img/anhdt.jfif', quantity: 1, status: true },
+            { id: 'sp11', name: 'ip25', price: 700001, img: '/img/anhdt.jfif', quantity: 1, status: true },
+            { id: 'sp12', name: 'ip26', price: 70000, img: '/img/anhdt.jfif', quantity: 1, status: true }
+        ];
+
+        const itemsPerPage = 6;
+        let currentPage = 1;
+
+        function renderCart(cart) {
+            if (!cart || !cart.id) return '';
+            return `
+                <td>
+                    <img src="${cart.img}" alt="ảnh đt" style="width: 10rem;">
+                    <div class="product-info">
+                        <div>${cart.name}</div>
+                        <div>Giá: ${cart.price}</div>
+                        <div>
+                            <button class="qty sub-btn" onclick="subtract('${cart.id}')">-</button>
+                            ${cart.quantity}
+                            <button class="qty add-btn" onclick="add('${cart.id}')">+</button>
+                        </div>
+                    </div>
+                    <div><button onclick="removeItem('${cart.id}')">Xoá</button></div>
+                </td>`;
+        }
+
+        function renderListCart(carts, page = 1) {
+            var start = (page - 1) * itemsPerPage;
+            var end = start + itemsPerPage;
+            var cartHTML = '';
+            for (let index = start; index < end && index < carts.length; index += 3) {
+                cartHTML += `<tr>${renderCart(carts[index])}${renderCart(carts[index + 1])}${renderCart(carts[index + 2])}</tr>`;
+            }
+            document.getElementById("list-cart").innerHTML = cartHTML;
+            renderPagination(carts.length, page);
+        }
+
+        function renderPagination(totalItems, currentPage) {
+            var totalPages = Math.ceil(totalItems / itemsPerPage);
+            var paginationHTML = '';
+            for (let page = 1; page <= totalPages; page++) {
+                paginationHTML += `<button class="${page === currentPage ? 'active' : ''}" onclick="goToPage(${page})">${page}</button>`;
+            }
+            document.getElementById("pagination").innerHTML = paginationHTML;
+        }
+
+        function goToPage(page) {
+            currentPage = page;
+            renderListCart(listCart, currentPage);
+        }
+
+        function searchProduct() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const filteredCart = listCart.filter(item => item.id.toLowerCase().includes(searchInput));
+            renderListCart(filteredCart, 1);
+        }
+
+        function subtract(id) {
+            for (let index = 0; index < listCart.length; index++) {
+                if (id == listCart[index].id && listCart[index].quantity > 1) {
+                    listCart[index].quantity--;
+                    break;
+                }
+            }
+            renderListCart(listCart, currentPage);
+        }
+
+        function add(id) {
+            for (let index = 0; index < listCart.length; index++) {
+                if (id == listCart[index].id) {
+                    listCart[index].quantity++;
+                    break;
+                }
+            }
+            renderListCart(listCart, currentPage);
+        }
+
+        function removeItem(id) {
+            listCart = listCart.filter(item => item.id !== id);
+            renderListCart(listCart, currentPage);
+        }
+
+        // Initial render
+        renderListCart(listCart, currentPage);
+    </script>
+</body>
+</html>
