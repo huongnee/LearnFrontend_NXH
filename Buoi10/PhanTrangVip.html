@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Render product</title>
+    <style>
+      #list-product {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .box-product {
+        width: 30%;
+      }
+      .w-100 {
+        width: 100%;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+      }
+      li {
+        padding: 0.5rem;
+        border: 1px solid red;
+        margin: 0.2rem;
+        cursor: pointer;
+      }
+      .active {
+        border: 1px solid blue;
+        background-color: rgb(230, 173, 181);
+      }
+    </style>
+  </head>
+  <body>
+    <section id="list-product"></section>
+    <div id="List-page">
+      <ul></ul>
+    </div>
+    <script src="/jquery/jquery.js"></script>
+    <script>
+      var listPro = [
+        {
+          id: "sp1",
+          imgs: "/img/ig1.jpg",
+          name: "ip1",
+          price: "3000",
+        },
+        {
+          id: "sp2",
+          imgs: "/img/ig1.jpg",
+          name: "ip1",
+          price: "3000",
+        },
+        {
+          id: "sp3",
+          imgs: "/img/ig1.jpg",
+          name: "ip1",
+          price: "3000",
+        },
+        {
+          id: "sp4",
+          imgs: "/img/ig1.jpg",
+          name: "ip1",
+          price: "3000",
+        },
+        {
+          id: "sp5",
+          imgs: "/img/ig2.jfif",
+          name: "ip1",
+          price: "3000",
+        },
+        {
+          id: "sp6",
+          imgs: "/img/ig2.jfif",
+          name: "ip1",
+          price: "3000",
+        },
+      ];
+
+      function renderCart(product) {
+        var renderPro =
+          ` <div class="box-product">
+        <div class="product-img">
+          <img 
+            class="w-100"
+            src="` +
+          product.imgs +
+          `"
+            alt="ảnh điện thoại"
+          />
+        </div>
+        <div class="title">
+            <h3>` +
+          product.name +
+          `</h3>
+            <p>` +
+          product.price +
+          `</p>
+        </div>
+      </div>`;
+        return renderPro;
+      }
+
+      // Hàm để render danh sách sản phẩm vào bảng
+      function renderListCart(carts) {
+        $("#list-product").empty(); // Clear previous content
+        for (let index = 0; index < carts.length; index++) {
+          $("#list-product").append(renderCart(carts[index]));
+        }
+      }
+
+      // Chia page
+      var pages = {
+        page: 1,
+        slSPtrenPage: 3,
+        count: 0,
+        maxPage: 1,
+        proStart: 0,
+        proEnd: 2,
+      };
+
+      // Hàm để render trang sản phẩm
+function renderPage(index) {
+  return `<li class="page" data-page="${index}">` + index + `</li>`;
+}
+
+function renderListProduct(products) {
+  $("#list-product").empty(); // Xóa sản phẩm trước đó trước khi render lại
+  for (let index = pages.proStart; index <= pages.proEnd && index < products.length; index++) {
+    $("#list-product").append(renderCart(products[index]));
+  }
+}
+
+function listPageProduct(list) {
+  pages.count = Math.ceil(list.length / pages.slSPtrenPage);
+  pages.proStart = pages.slSPtrenPage * (pages.page - 1);
+
+  if (pages.page === pages.count) {
+    pages.proEnd = list.length - 1;
+  } else {
+    pages.proEnd = pages.slSPtrenPage * pages.page - 1;
+  }
+
+  renderListProduct(list); // Render sản phẩm cho trang hiện tại
+
+  // Clear existing pagination and render new pagination
+  $("#List-page ul").empty();
+  for (let index = 1; index <= pages.count; index++) {
+    $("#List-page ul").append(renderPage(index));
+  }
+
+  // Add active class to the current page button
+  $(".page").eq(pages.page - 1).addClass("active");
+
+  // Attach click event to pagination buttons
+  $(".page").on("click", function () {
+    $(".page").removeClass("active"); // Remove active class from all buttons
+    $(this).addClass("active"); // Add active class to the clicked button
+    pages.page = $(this).data("page");
+    listPageProduct(list);
+  });
+}
+
+// Khởi động trang với danh sách sản phẩm và phân trang
+listPageProduct(listPro);
+
+    </script>
+  </body>
+</html>

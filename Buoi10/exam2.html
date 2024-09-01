@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sử dụng jQuery</title>
+    <style>
+        #errTK,
+        #errPS,
+        #errPS2,
+        #errTK1 {
+            display: none;
+            color: rgb(255, 132, 0);
+        }
+    </style>
+</head>
+<body>
+    <form action="" name="myform" method="post">
+        <label for="us">User</label>
+        <input type="text" name="us" id="us" />
+        <p id="errTK">Không được để trống trường này</p>
+      </div>
+      <div>
+        <label for="ps">PassWord</label>
+        <input type="password" name="ps" id="ps" />
+        <p id="errPS">Không được để trống trường này</p>
+      </div>
+      <div>
+        <input type="button" name="" id="" value="Đăng ký" />
+        <input type="reset" name="" id="" value="Reset" />
+      </div>
+    </form>
+
+    <script src="/jquery/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Kiểm tra trường username
+            $('#us').blur(function(){
+                var username = $("#us").val();
+                if (username === "") {
+                    $("#errTK").css("display", "block");
+                } else {
+                    $("#errTK").css("display", "none");
+                }
+            });
+
+            // Kiểm tra trường password
+            $('#ps').blur(function(){
+                var password = $("#ps").val();
+                if (password === "" || password == undefined) {
+                    $("#errPS").css("display", "block");
+                } else {
+                    $("#errPS").css("display", "none");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

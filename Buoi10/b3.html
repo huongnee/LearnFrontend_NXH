@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #main {
+        border: solid 1px #ccc;
+        padding: 10px;
+        width: 350px;
+      }
+
+      .clearfix {
+        overflow: hidden;
+        clear: both;
+      }
+
+      #main ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #main ul li {
+        float: left;
+      }
+
+      #main ul li a {
+        display: block;
+        border: solid 1px #ccc;
+        padding: 5px 10px;
+        text-decoration: none;
+        margin-right: 5px;
+      }
+
+      .maudo {
+        color: red;
+      }
+
+      .mauxanh {
+        color: green;
+      }
+
+      .mauvang {
+        color: yellow;
+      }
+
+      .maughi {
+        color: #666;
+      }
+
+      .mautim {
+        color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h3>Chọn màu chữ</h3>
+      <ul class="clearfix">
+        <li><a href="javascript:void(0)" id="maudo">Đỏ</a></li>
+        <li><a href="javascript:void(0)" id="mauxanh">Xanh</a></li>
+        <li><a href="javascript:void(0)" id="mauvang">Vàng</a></li>
+        <li><a href="javascript:void(0)" id="maughi">Ghi</a></li>
+        <li><a href="javascript:void(0)" id="mautim">Tím</a></li>
+      </ul>
+      <div id="content" class="clearfix">Lập trình web với PHP</div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("a").click(function (e) {
+          let mau = e.target.id;
+          $("#content").addClass(mau);
+        });
+      });
+    </script>
+  </body>
+</html>

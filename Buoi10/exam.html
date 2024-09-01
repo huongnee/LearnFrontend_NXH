@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cl-blue {
+        border: 1px solid red;
+      }
+      .cl-pink {
+        border: 1px solid pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tuong tac thong qua the html</h1>
+    <h2 class="bl1">Tương tác tiếp nè</h2>
+    <h3 id="frist-id">Tiếp tục nữa</h3>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed consectetur
+        libero error exercitationem asperiores reprehenderit voluptatem
+        doloribus et corrupti eligendi molestiae quisquam, similique voluptate
+        eum. Nihil veniam sed ad? At.
+      </p>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+      maxime aperiam saepe nulla porro vel, illo aliquam excepturi
+      exercitationem harum quisquam reprehenderit vero hic ducimus, laboriosam
+      ex expedita placeat eos?
+    </p>
+    <!-- cach 1 -->
+    <!-- <script src = "/jquery/jquery.js"></script> -->
+    <!-- cach 2 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      // $(body).ready(function(){
+      //     $(this).add("hello");
+      // })
+      //Tương tác thông qua thẻ html
+      $("body").append("hello");
+      $("h1").css("color", "red");
+      //tương tac với thẻ html qua class
+      $(".bl1").css("color", "green");
+      $(".bl1").addClass("cl-blue");
+      //tương tac với thẻ html qua id
+      $("#frist-id").addClass("cl-pink");
+      //
+      $("div>p").css("background", "pink");
+      $("p").append($("h1"));
+    </script>
+  </body>
+</html>

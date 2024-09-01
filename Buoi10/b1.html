@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sử dụng jquery check form</title>
+        <style>
+       #errName,#errPass,#errName2{
+            display: none;
+            color: red;
+        }
+      
+    </style>
+    </head>
+    <body>
+        <form name="frm">
+            <div>
+                <label for="userName">User Name</label>
+                <input type="text" name="userName" id="userName"
+                    onblur="checkUserName()">
+                <p id="errName">Tên đăng nhập không được bỏ trống</p>
+                <p id="errName2">Tên đăng phải chứa ký @</p>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+                <p id="errPass">Mật khẩu không được bỏ trống</p>
+            </div>
+            <div>
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Remember</label>
+            </div>
+            <div>
+                <input type="submit" name="submit" id="submit"
+                    value="Đăng nhập">
+            </div>
+        </form>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>    
+        function checkUserName(){
+            var userName = $('#userName').val();
+     
+            if(userName === ""){
+                var  errName = $('#errName')
+                // errName.css("display","block");
+                errName.show();
+            }else{
+                var  errName = $('#errName')
+                // errName.css("display","block");
+                errName.hide();
+            }
+        }
+        $('#password').blur(function(){            
+            var password = $('#password').val();
+            if(password === "" || password === undefined){
+                var  errPass = $('#errPass')
+                errPass.css("display","block");
+            }else{
+                var  errPass = $('#errPass')
+                errPass.css("display","none");
+            }
+        })
+
+
+    </script>
+    </body>
+</html>

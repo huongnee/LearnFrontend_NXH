@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Render Product</title>
+    <style>
+      #list-product {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .box-product {
+        width: 28%;
+      }
+      .w-100 {
+        width: 100%;
+      }
+      h3,
+      p {
+        text-align: center;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+      }
+      li {
+        padding: 0.5rem;
+        border: 1px solid #000;
+        margin: 0.5rem;
+      }
+      .active {
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="list-product"></section>
+    <div id="list-page">
+      <ul></ul>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      var listPro = [
+        {
+          id: "sp01",
+          img: "/img/ig1.jpg",
+          name: "Iphone15 Promax",
+          price: "6000",
+        },
+        {
+          id: "sp02",
+          img: "/img/ig1.jpg",
+          name: "Iphone14 Plus",
+          price: "5000",
+        },
+        {
+          id: "sp03",
+          img: "/img/ig1.jpg",
+          name: "Iphone15 Plus",
+          price: "6000",
+        },
+        {
+          id: "sp04",
+          img: "/img/ig1.jpg",
+          name: "Iphone13 Pro",
+          price: "6000",
+        },
+        {
+          id: "sp05",
+          img: "/img/ig1.jpg",
+          name: "Iphone15",
+          price: "6000",
+        },
+        {
+          id: "sp06",
+          img: "/img/ig1.jpg",
+          name: "Iphone15",
+          price: "6000",
+        }
+      ];
+
+      // render 1 sản phẩm
+      function renderProduct(product) {
+        var renderProduct =
+          `<div class="box-product">
+                <div class="product-img">
+                    <img class="w-100" src="` +
+          product.img +
+          `" alt="iphone15">
+                </div>
+                <div class="title">
+                    <h3>` +
+          product.name +
+          `</h3>
+                    <p>price: ` +
+          product.price +
+          `$</p>
+                </div>
+            </div>`;
+        return renderProduct;
+      }
+
+      //render 1 list sản phẩm
+      function renderListProduct(products) {
+        for (let i = 0; i < products.length; i++) {
+          $("#list-product").append(renderProduct(products[i]));
+        }
+      }
+
+      // renderListProduct(listPro);
+
+      // Chia page
+      var pages = {
+        page: 2,
+        slSPtrenPage: 3, // số lượng sản phẩm trên 1 page
+        count: 0, // số lượng page
+        proStart: 0,
+        proEnd: 2,
+      };
+
+      //render Page
+      function renderPage(page) {
+        var renderPage = ``;
+        if (page === pages.page) {
+          renderPage = `<li class="page active">` + page + `</li>`;
+        } else {
+          renderPage = `<li class="page">` + page + `</li>`;
+        }
+        return renderPage;
+      }
+      //render 1 list sản phẩm theo page
+      function renderListProductPage(products) {
+        for (let i = 0; i < products.length; i++) {
+          if (i >= pages.proStart && i <= pages.proEnd) {
+            $("#list-product").append(renderProduct(products[i]));
+          }
+        }
+      }
+      function setPage(list) {
+        pages.count = Math.ceil(list.length / pages.slSPtrenPage);
+        pages.proStart = pages.slSPtrenPage * (pages.page - 1);
+        if (pages.page == pages.count) {
+          pages.proEnd = list.length - 1;
+        } else {
+          pages.proEnd = pages.slSPtrenPage * pages.page - 1;
+        }
+      }
+
+      function listPageProduct(list) {
+        setPage(list);
+        for (let i = 1; i <= pages.count; i++) {
+          $("#list-page>ul").append(renderPage(i));
+        }
+        attachClickEvent(); // Gắn sự kiện sau khi render page
+      }
+
+      function attachClickEvent() {
+        $("#list-page>ul>li").click(function () {
+          pages.page = $(this).html();
+          $("#list-product").children().remove();
+          setPage(listPro);
+          $(this).addClass("active");
+          $(this).siblings().removeClass("active");
+          renderListProductPage(listPro);
+        });
+      }
+
+      listPageProduct(listPro);
+      renderListProductPage(listPro);
+    </script>
+  </body>
+</html>
