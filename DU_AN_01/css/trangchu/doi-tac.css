@@ -1,0 +1,92 @@
+/* banner-cuoi */
+#banner-cuoi .firsth {
+    text-transform: uppercase;
+    font-family: "Gotham-Ultra";
+    color: #2c2e53;
+    text-align: center;
+}
+
+#banner-cuoi .firsth::after {
+    content: "";
+    display: block;
+    width: 5%;
+    height: 8px;
+    background-color: #bd945f;
+    margin: 0.5rem auto;
+}
+
+.item-img-p {
+    /* padding: 1rem; */
+}
+
+
+.item-p {
+    background-color: #bd945f;
+    padding: 1rem;
+    color: #fff;
+}
+
+.item-p h2 {
+    font-size: 1.4375rem;
+    margin-bottom: 0.625rem;
+}
+
+.item-p p {
+    font-size: 0.875rem;
+    color: #000;
+}
+
+.p-img-p {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.p-h {
+    margin-left: 1rem;
+}
+
+.p-h h2 {
+    color: #bd945f;
+    font-size: 1.125rem;
+}
+
+.p-h p {
+    font-size: 0.875rem;
+    color: #000;
+}
+
+.plus-item {
+    border: none;
+    background-color: #fff;
+    color: #bd945f;
+    text-transform: uppercase;
+}
+
+.category-item img {
+    margin: 0.5rem;
+    max-width: 150px;
+}
+
+.end-section img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.u-contact {
+    margin-top: 50px;
+}
+
+.u-contact input {
+    width: 300px;
+    padding: 10px;
+}
+
+.u-contact button {
+    background-color: #bd945f;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin-left: 10px;
+}

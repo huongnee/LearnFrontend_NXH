@@ -1,0 +1,110 @@
+   /* Đặt nền trắng cho phần chứa sản phẩm */
+   .catalog-box1 {
+    padding: 30px 0;
+}
+
+.product-title {
+    font-size: 24px;
+    color: #b76e37; /* Màu tiêu đề */
+    margin-bottom: 30px;
+}
+.product-item img {
+display: block;
+width: 100%; /* Đặt chiều rộng ảnh bằng 100% */
+height: auto;
+/* margin: 0 auto;  */
+/* Căn giữa ảnh */
+/* max-width: 300px; */
+/* Đặt chiều rộng tối đa cho ảnh và văn bản */
+transition: transform 0.3s ease;
+}
+
+
+/* Hiệu ứng khi di chuột vào hình sản phẩm */
+.product-item img:hover {
+    transform: scale(1.05);
+}
+
+.product-item h4 {
+    font-size: 18px;
+    color: #b76e37;
+    margin-top: 15px;
+    font-weight: bold;
+    text-transform: uppercase; /* Chuyển thành chữ in hoa */
+    text-align: justify;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+    text-align: justify;
+
+}
+
+/* Căn chỉnh pagination */
+.pagination {
+    margin-top: 30px;
+}
+
+.page-item .page-link {
+    color: #b76e37; 
+    border-color: #b76e37;
+}
+
+.page-item .page-link:hover {
+    background-color: #b76e37;
+    color: white;
+}
+
+/* Thêm hiệu ứng cho nút pagination */
+.page-item.active .page-link {
+    background-color: #b76e37;
+    border-color: #b76e37;
+    color: white;
+}
+
+/* Khoảng cách giữa các sản phẩm và tiêu đề */
+.product-item {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng hover cho toàn bộ khối sản phẩm */
+.product-item:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Đảm bảo các hình ảnh căn giữa theo chiều dọc */
+.product-item img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.product-title {
+    width:100%;
+    position: relative; 
+    display: inline-block; 
+    margin: 2rem 0; 
+    color: #2c2e53; 
+    font-family: "Gotham-Ultra"; 
+    font-size: 1.5rem; 
+    }
+    
+    .product-title:after {
+    content: ''; 
+    display: block; 
+    width: 10%; 
+    height: 0.5rem; 
+    background-color: #bd945f; 
+    margin: 0 auto; 
+    opacity: 1; 
+    transition: opacity 0.3s ease; 
+    }
+    
+    .product-title:hover:after {
+    opacity: 1; /* Hiện đường kẻ khi hover */
+    }

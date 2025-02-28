@@ -1,0 +1,74 @@
+.container>.item {
+    text-align: left;
+    text-align: justify;
+}
+.container>h2 {
+margin-top: 5rem; /* Thêm khoảng cách 5rem phía trên thẻ h2 */
+}
+.product-title {
+width:100%;
+position: relative; /* Để sử dụng vị trí tương đối cho đường kẻ */
+display: inline-block; /* Để kích thước thẻ h2 được tính theo nội dung */
+margin: 2rem 0; 
+color: #2c2e53; 
+font-family: "Gotham-Ultra"; 
+font-size: 1.5rem; 
+}
+
+.product-title:after {
+content: ''; 
+display: block; /* Hiển thị dưới dạng block */
+width: 15%; 
+height: 0.5rem; 
+background-color: #bd945f; 
+margin: 0 auto; 
+opacity: 1; /* Bắt đầu với độ mờ */
+}
+
+.product-title:hover:after {
+opacity: 1; /* Hiện đường kẻ khi hover */
+}
+
+.product-slider {
+    margin: 20px 0;
+}
+
+.product-slider img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-slider h4, .product-slider p {
+    text-align: center;
+    margin: 10px 0;
+}
+.slick-prev, .slick-next {
+background-color: orange !important; 
+color: white !important; 
+border-radius: 50% !important; 
+width: 50px !important; 
+height: 50px !important; 
+display: flex !important;
+align-items: center !important;
+justify-content: center !important;
+font-size: 24px !important; 
+z-index: 1 !important;
+position: absolute !important;
+top: 40% !important; 
+transform: translateY(-50%) !important; /* Đưa nút lên để đúng vị trí căn giữa */
+}
+
+.slick-prev {
+left: -60px !important; /* Đưa nút ra ngoài phía bên trái của ảnh */
+}
+
+.slick-next {
+right: -60px !important; /* Đưa nút ra ngoài phía bên phải của ảnh */
+}
+
+
+.slick-prev:before, .slick-next:before {
+display: none !important; /* Ẩn mũi tên mặc định của Slick */
+}

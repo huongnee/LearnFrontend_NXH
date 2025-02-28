@@ -1,0 +1,329 @@
+* {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: "Gotham-Medium";
+  }
+
+
+  a,
+a:hover,
+a:active,
+a:visited {
+text-decoration: none;
+}
+
+#navbarNav a {
+font-family: "Gotham-Medium";
+font-size: 1rem;
+color: #000;
+display: block !important;
+padding-left: 2rem !important;
+}
+header .navbar {
+padding: 0.25rem 0rem !important;
+}
+header .nav-link {
+padding: 0.25rem;
+}
+header ul li {
+position: relative;
+}
+header ul li.active:before {
+position: absolute;
+content: "";
+width: 50%;
+height: 0.2rem;
+top: 100%;
+left: 2rem;
+background-color: #bd945f;
+animation: menuHover 0.2s ease-in 1;
+}
+
+@keyframes menuHover {
+from {
+width: 30px;
+opacity: 0;
+}
+to {
+width: 60px;
+opacity: 1;
+}
+}
+  footer {
+    background-color: #201d1d;
+    width: 100%;
+    min-height: 305px; /* Đảm bảo chiều cao tối thiểu */
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+
+  .footer-div {
+    margin-left: 1rem; /* 30px */
+  }
+
+  .footer-div p,
+  .footer-div p > a {
+    color: #fff;
+  }
+
+  .footer-div p.active1,
+  .footer-div p.active2,
+  .footer-div p.active3 {
+    position: relative;
+  }
+
+  .footer-div p.active1::after,
+  .footer-div p.active2::after,
+  .footer-div p.active3::after {
+    content: "";
+    position: absolute;
+    height: 0.3125rem; /* 5px */
+    width: 5.3125rem; /* 85px */
+    background-color: #ffffff;
+    display: block;
+  }
+
+  .footer-div p.active1::after,
+  .footer-div p.active2::after {
+    transform: translateX(-100%);
+    left: 5.3125rem; /* 8.5% */
+  }
+
+  .footer-div p.active3::after {
+    transform: translateX(-70%);
+    left: 3.75rem; /* 22.5% */
+  }
+
+  .footer-div p.p {
+    text-transform: uppercase;
+    padding-top: 4.375rem; /* 70px */
+  }
+
+  .footer-div .p2 {
+    text-transform: uppercase;
+    margin-bottom: 0.8125rem; /* 13px */
+  }
+
+  .footer-div .p3,
+  .footer-div .p4 > a {
+    font-family: "Gotham-Thin";
+    font-size: 1rem; /* 16px */
+    margin: 0;
+  }
+
+  .footer-div .p4 {
+    margin: 0;
+  }
+  .icon-category {
+    display: flex;
+  }
+
+  /* Responsive cho màn hình nhỏ (mobile) */
+  /* Responsive cho màn hình mobile (dưới 768px) */
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+ /* Mobile (từ 576px trở xuống) */
+ @media (max-width: 576px) {
+
+footer {
+flex-direction: column;
+padding-left: 1rem;
+padding-right: 1rem;
+align-items: center; /* Căn giữa theo chiều ngang */
+text-align: center; /* Căn giữa nội dung văn bản */
+}
+
+.footer-div {
+margin-bottom: 1rem;
+align-items: center;
+}
+
+.footer-div p,
+.footer-div a {
+text-align: center;
+}
+
+.icon-category {
+justify-content: center;
+align-items: center;
+display: flex;
+}
+
+.icon-category p {
+margin: 0 10px; /* Đặt khoảng cách giữa các icon */
+}
+.footer-div p.active1::after,
+.footer-div p.active2::after,
+.footer-div p.active3::after {
+left: 50%; /* Đặt vị trí giữa */
+transform: translateX(-50%); /* Dịch chuyển để căn giữa */
+}
+.navbar-collapse {
+justify-content: center; 
+text-align: center;
+}
+
+.navbar-nav {
+width: 100%; /* Để các phần tử bên trong có đủ không gian để căn giữa */
+justify-content: center; /* Căn giữa các mục bên trong */
+}
+
+.navbar-nav .nav-item {
+margin-bottom: 0.5rem; /* Thêm khoảng cách giữa các mục để dễ nhìn */
+}
+header .navbar-nav {
+justify-content: center;
+}
+
+/* Active nav-item */
+header ul li.active:before {
+content: "";
+position: absolute;
+width: 4.8rem;
+height: 0.15rem;
+top: 100%;
+left: 53%; /* Đặt ở giữa */
+transform: translateX(-50%); /* Dịch chuyển để căn giữa */
+background-color: #bd945f;
+animation: menuHover 0.2s ease-in 1;
+}
+}
+
+
+/* Tablet (576px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+footer {
+padding-left: 1.5rem;
+padding-right: 1.5rem;
+}
+
+.footer-div {
+margin-bottom: 1rem;
+}
+
+.icon-category {
+justify-content: center;
+}
+.navbar-collapse {
+justify-content: center; /* Căn giữa các phần tử trong navbar */
+text-align: center;
+}
+
+.navbar-nav {
+width: 100%; /* Để các phần tử bên trong có đủ không gian để căn giữa */
+justify-content: center; /* Căn giữa các mục bên trong */
+}
+
+.navbar-nav .nav-item {
+margin-bottom: 0.5rem; /* Thêm khoảng cách giữa các mục để dễ nhìn */
+}
+header .navbar-nav {
+justify-content: center;
+}
+
+/* Active nav-item */
+header ul li.active:before {
+content: "";
+position: absolute;
+width: 4.8rem;
+height: 0.15rem;
+top: 100%;
+left: 53%; /* Đặt ở giữa */
+transform: translateX(-50%); /* Dịch chuyển để căn giữa */
+background-color: #bd945f;
+animation: menuHover 0.2s ease-in 1;
+}
+}
+
+/* Tablet và laptop nhỏ (768px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+footer {
+padding-left: 2rem;
+padding-right: 2rem;
+}
+
+.footer-div {
+margin-bottom: 0.5rem;
+}
+
+.icon-category {
+justify-content: flex-start;
+}
+.navbar-collapse {
+justify-content: center; /* Căn giữa các phần tử trong navbar */
+text-align: center;
+}
+
+.navbar-nav {
+width: 100%; /* Để các phần tử bên trong có đủ không gian để căn giữa */
+justify-content: center; /* Căn giữa các mục bên trong */
+}
+
+.navbar-nav .nav-item {
+margin-bottom: 0.5rem; /* Thêm khoảng cách giữa các mục để dễ nhìn */
+}
+header .navbar-nav {
+justify-content: center;
+}
+
+/* Active nav-item */
+header ul li.active:before {
+content: "";
+position: absolute;
+width: 4.8rem;
+height: 0.15rem;
+top: 100%;
+left: 52%; /* Đặt ở giữa */
+transform: translateX(-50%); /* Dịch chuyển để căn giữa */
+background-color: #bd945f;
+animation: menuHover 0.2s ease-in 1;
+}
+}
+
+/* Laptop và desktop (trên 992px) */
+@media (min-width: 993px) {
+footer {
+/* margin-top: 5rem; */
+padding-left: 300px;
+padding-right: 300px;
+}
+
+.icon-category {
+justify-content: flex-start;
+}
+.navbar-collapse {
+justify-content: center; /* Căn giữa các phần tử trong navbar */
+text-align: center;
+}
+
+.navbar-nav {
+width: 100%; /* Để các phần tử bên trong có đủ không gian để căn giữa */
+justify-content: center; /* Căn giữa các mục bên trong */
+}
+
+.navbar-nav .nav-item {
+margin-bottom: 0.5rem; /* Thêm khoảng cách giữa các mục để dễ nhìn */
+}
+header .navbar-nav {
+justify-content: center;
+}
+
+/* Active nav-item */
+header ul li.active:before {
+content: "";
+position: absolute;
+width: 4.8rem;
+height: 0.15rem;
+top: 100%;
+left: 52%; /* Đặt ở giữa */
+transform: translateX(-50%); /* Dịch chuyển để căn giữa */
+background-color: #bd945f;
+animation: menuHover 0.2s ease-in 1;
+}
+}

@@ -1,0 +1,186 @@
+   /* Đặt nền trắng cho phần chứa sản phẩm */
+   .catalog-box1 {
+    padding: 30px 0;
+}
+
+.product-title {
+    font-size: 24px;
+    color: #b76e37; /* Màu tiêu đề */
+    margin-bottom: 30px;
+}
+.product-item img {
+display: block;
+width: 100%; /* Đặt chiều rộng ảnh bằng 100% */
+height: auto;
+/* margin: 0 auto;  */
+/* Căn giữa ảnh */
+/* max-width: 300px; */
+/* Đặt chiều rộng tối đa cho ảnh và văn bản */
+transition: transform 0.3s ease;
+}
+
+
+/* Hiệu ứng khi di chuột vào hình sản phẩm */
+.product-item img:hover {
+    transform: scale(1.05);
+}
+
+.product-item h4 {
+    font-size: 18px;
+    color: #b76e37; /* Màu tiêu đề sản phẩm */
+    margin-top: 15px;
+    font-weight: bold;
+    text-transform: uppercase; /* Chuyển thành chữ in hoa */
+    text-align: center;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #555; /* Màu chữ của giá */
+    margin-top: 5px;
+    text-align: center;
+
+}
+
+/* Căn chỉnh pagination */
+.pagination {
+    margin-top: 30px;
+}
+
+.page-item .page-link {
+    color: #b76e37; /* Màu của số trang */
+    border-color: #b76e37;
+}
+
+.page-item .page-link:hover {
+    background-color: #b76e37;
+    color: white;
+}
+
+/* Thêm hiệu ứng cho nút pagination */
+.page-item.active .page-link {
+    background-color: #b76e37;
+    border-color: #b76e37;
+    color: white;
+}
+
+/* Khoảng cách giữa các sản phẩm và tiêu đề */
+.product-item {
+    padding: 15px;
+    /* background-color: #f9f9f9; */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng hover cho toàn bộ khối sản phẩm */
+.product-item:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Đảm bảo các hình ảnh căn giữa theo chiều dọc */
+.product-item img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.product-title {
+    width:100%;
+    position: relative; /* Để sử dụng vị trí tương đối cho đường kẻ */
+    display: inline-block; /* Để kích thước thẻ h2 được tính theo nội dung */
+    margin: 2rem 0; /* Khoảng cách trên và dưới */
+    color: #2c2e53; /* Màu chữ */
+    font-family: "Gotham-Ultra"; /* Font chữ */
+    font-size: 1.5rem; /* Kích thước chữ */
+    }
+    
+    .product-title:after {
+    content: ''; /* Thêm nội dung rỗng cho pseudo-element */
+    display: block; /* Hiển thị dưới dạng block */
+    width: 10%; /* Chiều rộng đường kẻ */
+    height: 0.5rem; /* Độ cao của đường kẻ */
+    background-color: #bd945f; /* Màu đường kẻ */
+    margin: 0 auto; /* Căn giữa đường kẻ */
+    opacity: 0; /* Bắt đầu với độ mờ */
+    transition: opacity 0.3s ease; /* Hiệu ứng chuyển tiếp */
+    }
+    
+    .product-title:hover:after {
+    opacity: 1; /* Hiện đường kẻ khi hover */
+    }
+    #banner {
+      width: 100%; /* Chiều rộng 100% của phần tử cha */
+      min-height: 30rem; /* Tạo khoảng trống bằng 50% chiều rộng */
+      background-image: url('/images/banner.png');
+      background-size: cover; /* Thay đổi kích thước ảnh nền để nó bao phủ phần tử */
+      background-position: center; /* Căn giữa hình ảnh */
+      position: relative; /* Nếu cần sử dụng các phần tử con khác */
+  }
+
+    /* quan trọng sắp xếp */
+    .price-range {
+      /* background-color: #f8f8f8; */
+      padding: 10px 0;
+    }
+    .price-range a {
+      color: #bfa15a;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .price-range a:hover {
+      text-decoration: underline;
+    }
+    .sort-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .sort-dropdown-content {
+      /*  */
+      display: none;
+      text-align: justify;
+      position: absolute;
+      right: 0;
+      width: 13rem;
+      /* height: 8rem; */
+      background-color: white;
+      border: 2px solid orange;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .sort-dropdown-content a {
+      color: black;
+      padding: 8px 16px;
+      text-decoration: none;
+      display: block;
+      position: relative;
+    }
+    .sort-dropdown-content a:hover {
+
+      background-color: #f1f1f1;
+    }
+    .sort-dropdown:hover .sort-btn {
+      background-color: #f1f1f1;
+    }
+    .sort-dropdown-content a.selected::before {
+      content: "\2713"; /* Dấu V */
+      color: #ffcc00; /* Màu vàng */
+      position: absolute;
+      left: 0;
+      font-size: 1.8rem; /* Tăng kích thước dấu V */
+      line-height: 1;
+    }
+    .sort-dropdown:hover .sort-dropdown-content {
+      display: block;
+  }
+    /* Loại bỏ gạch chân khi click */
+    .sort-dropdown-content a.selected {
+        text-decoration: none;
+        padding-left: 2rem; /* Tạo khoảng cách giữa dấu V và chữ */
+
+    }
+
+    #sapxep{
+      margin-top: 3rem;
+    }
+    
+    

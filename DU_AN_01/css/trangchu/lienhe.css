@@ -1,0 +1,297 @@
+#lien-he {
+  position: relative;
+  min-height: 18rem;
+  /* margin-bottom: 10rem; */
+}
+.background1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  /* height: 15rem; */
+  background-image: url("/images/lienhe-bg.jpg");
+  background-size: cover;
+  opacity: 0.5;
+  background-position: center;
+}
+
+.overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  /* height: 15rem; */
+  background-color: rgba(173, 126, 72, 0.5); /* Độ trong suốt 50% */
+}
+
+.container,
+#lien-he .container {
+  position: relative;
+  z-index: 1; /* Đặt nội dung lên trên lớp phủ */
+  text-align: center;
+}
+
+.card {
+  background-color: white; /* Nền trong suốt */
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  padding: 20px;
+  margin-bottom: 20px; /* Khoảng cách giữa các ô */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Hiệu ứng phóng to khi di chuột */
+}
+
+.content-p > p {
+  color: #fff;
+  text-align: justify;
+}
+
+.p1,
+.p2,
+.sp1 {
+  text-transform: uppercase;
+  font-size: 1.40625rem !important; /* 22.5px */
+  color: white; /* Màu chữ trắng */
+}
+
+.p1 {
+  margin: 0;
+}
+
+.card-title {
+  color: rgb(199, 199, 81);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.card-text {
+  color: black;
+  margin: 0; /* Xóa khoảng cách mặc định */
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.product-title1 {
+  width: 100%;
+  text-align: left;
+  /* margin-left: 3rem; */
+  position: relative; 
+  display: inline-block; 
+  margin-top: 5rem; /* Khoảng cách trên và dưới */
+  color: white; /* Màu chữ trắng */
+  font-family: "Gotham-Ultra"; /* Font chữ */
+  font-size: 1.5rem; /* Kích thước chữ */
+}
+.product-title2{
+  margin-top: 4.5rem; /* Khoảng cách trên và dưới */
+
+}
+
+.product-title1:after {
+  content: ""; /* Thêm nội dung rỗng cho pseudo-element */
+  display: block; /* Hiển thị dưới dạng block */
+  width: 30%; /* Chiều rộng đường kẻ */
+  height: 0.5rem; /* Độ cao của đường kẻ */
+  background-color: white; /* Màu đường kẻ */
+  /* margin: 0 auto;  */
+  opacity: 0; /* Bắt đầu với độ mờ */
+  transition: opacity 0.3s ease; /* Hiệu ứng chuyển tiếp */
+}
+
+.product-title1:hover:after {
+  opacity: 1; /* Hiện đường kẻ khi hover */
+}
+
+/* Đưa cột hình ảnh về bên trái */
+.col-md-3 {
+  padding-left: 0; /* Bỏ padding bên trái */
+}
+
+/* Căn chỉnh thông tin liên hệ sang bên trái */
+.contact-info {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: flex-start; /* Căn bên trái */
+}
+
+.contact-info input {
+  margin-right: 10px; /* Khoảng cách giữa input và button */
+}
+
+/* Căn giữa cột thông tin liên hệ */
+.col-md-5 {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  height: 100%; /* Để cột có chiều cao đầy đủ */
+}
+.img-ghe {
+  position: absolute;
+  bottom: -50px;
+  /* left: 50px; */
+  width: 20rem;
+}
+.btn-primary {
+margin-bottom: 5px;
+color: black;
+background-color:white;
+border-color: white;
+}
+div.col-md-3>.ghene{
+  margin-left: -55rem;
+}
+@media (max-width: 768px) {
+.col-md-3, .col-md-5, .col-md-4 {
+  flex: 100%; /* Đưa mỗi cột thành hàng riêng biệt */
+  max-width: 100%; /* Đảm bảo các cột chiếm hết chiều rộng */
+}
+div.col-md-3>.ghene{
+  margin-left: 0;
+}
+.row {
+
+  /* flex-direction: column;  */
+  /* Xếp các cột thành cột dọc */
+}
+
+.img-ghe {
+  position: relative;
+  width: 100%;
+  max-width: 250px; /* Điều chỉnh kích thước ghế trên màn hình nhỏ */
+  margin-bottom: 20px; /* Khoảng cách dưới ghế để tránh chạm vào phần nội dung */
+}
+
+.product-title1, .product-title2 {
+  text-align: center; /* Căn giữa tiêu đề và form cho màn hình nhỏ */
+}
+
+.contact-info {
+  justify-content: center; /* Căn giữa form liên hệ */
+}
+}
+
+/* Màn hình rất nhỏ (dưới 576px) - Mobile nhỏ */
+@media (max-width: 575.98px) {
+.col-md-3, .col-md-5, .col-md-4 {
+  flex: 100%;
+  max-width: 100%;
+}
+div.col-md-3>.ghene{
+  margin-left: 0;
+}
+.row {
+  /* flex-direction: column; */
+}
+.content-p>p{
+  text-align: left;
+  max-width: 100%;
+}
+.img-ghe {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.product-title1, .product-title2 {
+  text-align: center;
+}
+
+.contact-info {
+  justify-content: center;
+}
+}
+
+/* Màn hình nhỏ (từ 576px đến 767.98px) - Tablet nhỏ */
+@media (min-width: 576px) and (max-width: 767.98px) {
+.col-md-3, .col-md-5, .col-md-4 {
+  flex: 100%;
+  max-width: 100%;
+}
+div.col-md-3>.ghene{
+  margin-left: 0;
+}
+.row {
+  flex-direction: column;
+}
+
+.img-ghe {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+.product-title1, .product-title2 {
+  text-align: center;
+}
+
+.contact-info {
+  justify-content: center;
+}
+}
+
+/* Màn hình trung bình (từ 768px đến 991.98px) - Tablet và desktop nhỏ */
+@media (min-width: 768px) and (max-width: 991.98px) {
+.col-md-3, .col-md-5, .col-md-4 {
+  flex: 100%;
+  max-width: 100%;
+}
+div.col-md-3>.ghene{
+  margin-left: 0;
+}
+.row {
+  flex-direction: column;
+}
+
+.img-ghe {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.product-title1, .product-title2 {
+  text-align: center;
+}
+
+.contact-info {
+  justify-content: center;
+}
+}
+
+/* Màn hình lớn (từ 992px đến 1199.98px) - Desktop lớn */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+.col-md-3, .col-md-5, .col-md-4 {
+  flex: 50%;
+  max-width: 50%;
+}
+div.col-md-3>.ghene{
+  margin-left: 0;
+}
+.row {
+  flex-direction: row;
+}
+
+.img-ghe {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+.product-title1, .product-title2 {
+  text-align: left;
+}
+
+.contact-info {
+  justify-content: flex-start;
+}
+}

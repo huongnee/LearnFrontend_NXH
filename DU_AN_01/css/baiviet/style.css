@@ -1,0 +1,63 @@
+#bai-viet{
+    margin-bottom: 2rem;
+}
+#bai-viet>.container{
+        padding: 3rem;
+        background-color: white; 
+        max-width: 60%; 
+        max-height: 30%;
+}
+h4 {
+    color: #d29f5f;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.content-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.content-section img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.blog-posts img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+.blog-posts p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: auto 0;
+    color: #4a4a4a;
+}
+
+.blog-posts {
+    width: 100%;
+    height: 60%;
+}
+
+.product-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #d29f5f;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+@media (max-width: 1025px) {
+    #bai-viet>.container {
+        
+        max-width: 100%; /* Giới hạn chiều rộng */
+    }
+    /* Căn chỉnh trên màn hình nhỏ */
+    .col-md-6 {
+        margin-bottom: 30px;
+    }
+   
+}

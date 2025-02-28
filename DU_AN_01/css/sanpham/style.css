@@ -1,0 +1,142 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap'); */
+
+section {
+  margin-bottom: 4rem;
+}
+#catelog1,
+#catelog2,
+#catelog3,
+#catelog4,
+#catelog5,
+#catelog6,
+#catelog7,
+#catelog8{
+  background-color: white;
+  padding: 3rem;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+   /* Chỉnh sửa để xếp theo cột */
+  /* flex-direction: column; */
+  padding: 2rem;
+  align-items: baseline !important;
+
+}
+
+
+.view-all {
+  align-self: flex-end; /* Đẩy chữ "Xem tất cả" sang bên phải */
+  /* margin-top: 0.5rem;  */
+  /* Khoảng cách giữa tiêu đề và chữ "Xem tất cả" */
+  color: #007bff; /* Màu chữ "Xem tất cả" */
+  cursor: pointer; /* Thay đổi con trỏ khi hover */
+}
+.product-title {
+  /* width: 100%; */
+  position: relative;
+  display: inline-block;
+  /* margin: 2rem 0; */
+  color: #2c2e53;
+  font-family: "Gotham-Ultra";
+  font-size: 1.5rem;
+}
+
+.product-title:after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 0.5rem;
+  background-color: #bd945f;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.product-title:hover:after {
+  opacity: 1;
+}
+
+.product-slider {
+  margin: 20px 0;
+}
+
+.product-slider img {
+  width: 100%;
+  height: auto; /* Đảm bảo hình ảnh giữ tỷ lệ khung hình */
+}
+
+.product-slider h4,
+.product-slider p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.slick-prev,
+.slick-next{
+  background-color: orange;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+.slick-next {
+  right: 20px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.view-all {
+  display: block;
+  text-align: right;
+  color:black !important;
+  font-family: "Gotham-Ultra"
+}
+span>a{
+  color: black !important;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+.card-title{
+  font-family: 'Gotham-Ultra';
+  font-size: 16px;
+}
+.card-text{
+  font-family: 'Gotham-Medium';
+  font-size: 8.47px;
+}
+p{
+  font-family: 'Gotham-Medium';
+}
+.view-all>a{
+  font-family: 'Gotham-Medium';
+  font-size: 18px;
+}
+h2{
+  margin: 0 !important;
+}
+

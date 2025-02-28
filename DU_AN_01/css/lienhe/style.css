@@ -1,0 +1,179 @@
+      /* Căn chỉnh khoảng cách giữa các phần tử */
+      /* #catelog {
+        background-color: rgb(186, 49, 49); 
+    } */
+  
+    #catelog {
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+      .catalog-box {
+        margin-top: -2.25rem;
+        padding: 5rem 0 0 0;
+        background-color: white; 
+        max-width: 60%; 
+        min-height: 35%; 
+    }
+    .catalog-box>.container{
+        padding-left:5rem ;
+        padding-right:5rem ;
+    }
+
+    .item1 img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        max-width: 500px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .contact-title {
+        font-size: 24px;
+        color: #b76e37;
+        margin-bottom: 20px;
+    }
+
+    /* Thiết lập style cho các trường input và textarea */
+    form input, form textarea {
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
+
+    .form-control {
+        border: 2px solid orange; 
+        padding: 10px;
+    }
+
+    .btn-submit {
+        background-color: #b76e37;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+    }
+
+    /* Căn chỉnh nút gửi về phía bên trái */
+    .btn-submit {
+        float: left;
+    }
+
+    /* Điều chỉnh layout để khoảng cách cân đối hơn */
+    .row {
+        display: flex;
+        align-items: stretch; 
+    }
+
+    .col-md-6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    
+    .item1{
+        height: 100%;
+    }
+    .item1>img{
+        height: 400px;
+    }
+    /* banner */
+    #banner {
+        /* position: relative; */
+        width: 120rem;
+        min-height: 29rem;
+        /* width: 100%;
+        height: 100%; */
+        background-image: url('/AnhCat/lien-he/banner.jpg');
+        /* <img src="images/banner.png" alt="Thế giới nội thất số 1 việt nam" class="w-100"> */
+      }
+    .container>.item{
+        padding-top: 7.5rem;
+    }
+      /* #banner .container {
+        position: relative;
+        height: 100%;
+      }
+      .banner-box {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+      } */
+    /*   
+      .banner-box .item {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        width: 70%;
+        left: 3rem;
+      } */
+      #banner h2:nth-child(1) {
+        color: #2c2e53;
+        font-family: "Gotham-Ultra";
+        font-size: 2.5rem;
+      }
+      #banner h2:nth-child(2) {
+        color: #bd945f;
+        font-family: "Gotham-Ultra";
+        font-size: 2.5rem;
+      }
+      #banner p {
+        font-family: "Gotham-Medium";
+        font-size: 1rem;
+        width: 65%;
+      }
+      #banner a {
+        background-color: #bd945f;
+        display: inline-block;
+        padding: 1rem 3rem;
+        font-family: "Gotham-Ultra";
+        color: #fff;
+        text-transform: uppercase;
+      }
+      .product-title {
+        width:100%;
+        position: relative; 
+        display: inline-block; 
+        margin: 2rem 0;
+        color: #2c2e53; 
+        font-family: "Gotham-Ultra"; 
+        font-size: 1.5rem;
+        }
+        
+        .product-title:after {
+        content: '';
+        display: block; 
+        width: 10%; 
+        height: 0.5rem;
+        background-color: #bd945f; 
+        margin: 0 auto; 
+        opacity: 0; 
+        transition: opacity 0.3s ease; /* Hiệu ứng chuyển tiếp */
+        }
+        
+        .product-title:hover:after {
+        opacity: 1; /* Hiện đường kẻ khi hover */
+        }
+
+
+        #catelog{
+          margin-bottom: 3rem;
+        }
+
+      @media (max-width: 768px) {
+        .catalog-box {
+            
+            max-width: 100%; /* Giới hạn chiều rộng */
+        }
+        /* Căn chỉnh trên màn hình nhỏ */
+        .col-md-6 {
+            margin-bottom: 30px;
+        }
+        #banner{
+            width: 100%;
+            max-height: 30%; 
+        }
+    }
