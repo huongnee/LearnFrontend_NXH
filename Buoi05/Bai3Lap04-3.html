@@ -40,7 +40,7 @@
             top:100%;
            
         }
-        ul li:hover .no3{
+        ul li:hover .no3 {
             display: block;
         }
         .no3 li:hover{
@@ -50,6 +50,30 @@
         .none li:hover{
             background-color: green;
         }
+    ul>.vip{
+        display: flex;
+        
+    }
+    .oknha{
+        position: relative;
+    }
+    ul li .demo1{
+        
+        display: none;
+    }
+    ul li:hover .demo1{
+        display: block;
+    }
+    ul li .demo3{
+        display: none;
+        position: absolute;
+        top:0;
+        left: 100%;
+    }
+    ul li:hover>.demo3{
+        display: block;
+    }
+    
     </style>
 </head>
 <body>
@@ -68,5 +92,23 @@
             <li class="no2">Liên hệ</li>
         </ul>
     </nav>
+    <nav class="hehe">
+        <ul class ="vip">
+            <li class="demo">toi la ai
+                <ul class="demo1">
+                    <li>ok</li>
+                    <li class="oknha">hh
+                        <ul class="demo3">
+                            <li>m1</li>
+                            <li>m2</li>
+                            <li>m3</li>
+                        </ul>
+                    </li>
+                    <li>11</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
 </body>
 </html>

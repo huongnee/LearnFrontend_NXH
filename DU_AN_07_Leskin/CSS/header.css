@@ -1,0 +1,301 @@
+/* Header */
+header {
+  background: url("../IMG/header_background.jpg") no-repeat center center;
+  background-size: cover;
+  color: #bd945f;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng nhẹ */
+  height: auto;
+  padding: 8px;
+  border-bottom: 8px solid #bd945f;
+}
+#nav{
+  padding: 0 42px;
+}
+/* Hộp tìm kiếm */
+.search-box {
+  flex-grow: 1;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 30px;
+  position: relative; 
+}
+
+.search-box input {
+  flex: 1;
+  border: 1px solid #bd945f;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: none;
+  height: 42px;
+}
+
+.search-box .search {
+  background-color: #bd945f;
+  border: none;
+  color: white;
+  padding: 0 15px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px; 
+  position: absolute; 
+  right: 0;
+}
+
+.search-box .search i {
+  font-size: 18px;
+}
+#link{
+  margin-left: 25px;
+  padding: 0 100px;
+}
+
+.link-wrapper {
+  text-align: center; 
+}
+
+.link a {
+  text-decoration: none; 
+  color: rgb(0, 0, 0); /* Màu chữ mặc định */
+  font-size: 14px;
+  transition: color 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.link-wrapper i {
+  font-size: 24px; /* Kích thước icon */
+  display: block;
+  margin-bottom: 5px;
+}
+
+.link a:hover {
+  color: #f08000; /* Màu khi hover */
+}
+
+/* Trang chủ nổi bật */
+.link-wrapper:first-child a::active {
+  color: #f08000; /* Màu nổi bật */
+}
+
+/* Khoảng cách giữa các liên kết */
+.link .link-wrapper {
+  flex: 1; 
+}
+.link.active {
+  color: #f08000; /* Màu chữ khi active */
+  font-weight: bold; /* Đậm chữ hơn để nổi bật */
+}
+.link:hover,
+.link.active {
+  color: #f08000; /* Giữ màu khi hover hoặc active */
+}
+
+.link.active i {
+  color: #bd945f; /* Màu icon khi active */
+}
+
+/* Các nút đăng nhập và đăng ký */
+.button_login {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 19px;
+  border: 2px solid #bd945f;
+  background-color: transparent;
+  color: #bd945f;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button_register {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 19px;
+  border: 2px solid #bd945f;
+  background-color: transparent;
+  color: #bd945f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button_login:hover,
+.button_register:hover {
+  background-color: #bd945f;
+  color: white;
+}
+
+.button_login {
+  background-color: #bd945f;
+  color: white;
+}
+
+.button_register:hover {
+  background-color: #a6804f;
+}
+
+/* Responsive Header */
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#user-menu {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 1rem;
+}
+
+#user-menu img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#user-menu select {
+  border: none;
+
+}
+
+@media (max-width: 768px) {
+  #nav {
+    padding: 5px; /* Thu nhỏ padding */
+  }
+  .search-box {
+    display: none; /* Ẩn hộp tìm kiếm trên màn hình nhỏ */
+  }
+
+  .navbar-brand img {
+    width: 40px;
+  }
+
+  .button_login, .button_register {
+    padding: 6px 12px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  
+  /* Navbar */
+  #nav {
+    padding: 0 15px; /* Giảm padding tổng thể */
+  }
+  /* Logo */
+  .navbar-brand {
+    max-width: 100px; /* Giảm kích thước logo */
+    margin-right: 20px; /* Tăng khoảng cách với hộp tìm kiếm */
+  }
+  .navbar-brand img {
+    max-height: 40px; /* Thu nhỏ logo */
+    width: auto;
+  }
+
+  /* Search Box */
+  .search-box {
+    max-width: 400px; /* Giới hạn chiều rộng hộp tìm kiếm */
+    margin-right: 10px; /* Cân chỉnh khoảng cách */
+  }
+  .search-box input {
+    font-size: 14px; /* Thu nhỏ font */
+    padding: 8px 12px; /* Điều chỉnh padding */
+  }
+  .search-box .search {
+    padding: 0 10px; /* Thu nhỏ nút tìm kiếm */
+  }
+
+  /* Link Navigation */
+  .link {
+    gap: 8px; /* Giảm khoảng cách giữa các liên kết */
+  }
+  #link{
+    margin-left: 25px;
+    padding: 0;
+  }
+  .link-wrapper {
+    flex: 1; /* Đảm bảo các liên kết đều nhau */
+  }
+  .link-wrapper a {
+    font-size: 14px; /* Giảm kích thước font */
+  }
+  .link-wrapper i {
+    font-size: 16px; /* Thu nhỏ icon */
+  }
+
+  /* Auth Buttons (Đăng nhập/Đăng ký) */
+  .button_login,
+  .button_register {
+    font-size: 13px; /* Thu nhỏ chữ */
+    padding: 6px 10px; /* Thu nhỏ padding */
+    margin-left: 5px; /* Điều chỉnh khoảng cách */
+  }
+}
+
+#mobile-menu {
+  position: absolute;
+  top: 60px; /* Điều chỉnh theo chiều cao header */
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 15px;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  display: block;
+}
+
+.mobile-nav a:hover {
+  background-color: #f8f9fa;
+  color: #bd945f;
+}
+
+.mobile-auth .button_login,
+.mobile-auth .button_register {
+  margin-bottom: 10px;
+}
+#mobile-menu {
+  display: none; /* Ẩn menu mặc định */
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid #bd945f;
+}
+
+#mobile-menu a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+  transition: background-color 0.3s ease;
+}
+
+#mobile-menu a:hover {
+  background-color: #f9f9f9;
+}
+
+#mobile-menu .button_login,
+#mobile-menu .button_register {
+  margin: 5px 0;
+}
+
+/* Nút hamburger */
+#hamburger-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}

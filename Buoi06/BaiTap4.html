@@ -9,24 +9,47 @@
   <body>
     <script>
       var number = prompt("Vui lòng nhập 1 số bất kỳ : ");
-      if (number < 2) {
-        document.write("Không có số nguyên tố nào !");
-      } else {
-        for (let index = 2; index <= number; index++) {
-          if (snt(index)) {
-            document.write(index);
+      var kt = 0;
+      
+      for(let i = 2 ; i<number;i++)
+      {
+        if(number % i == 0)
+          {
+            document.write("number ko phải snt ")
+            kt = 1;
+            break;
           }
+      }
+      if(kt == 0)
+      {
+        document.write("number là số nt")
+      }
+      
+    if(number < 2)
+    {
+      document.write("Không có số nguyên tố thỏa mãn")
+    }
+    else{
+      for(let i = 2 ; i<=number;i++)
+      {
+        if(check(i))
+        {
+          document.write(i)
         }
       }
-
-      function snt(a) {
-        for (let index = 2; index < a; index++) {
-          if (a % index == 0) {
-            return false;
+    }
+     function check(number1){
+      for(let i=2;i<number1;i++)
+      {
+        if(number1 % i == 0)
+          {
+            return false
           }
-        }
-        return true;
       }
+      return true
+     }
+     
+     
     </script>
   </body>
 </html>

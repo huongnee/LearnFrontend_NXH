@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les-kin</title>
+    <link rel="stylesheet" href="./CSS/header.css" />
+    <link rel="stylesheet" href="./CSS/login.css" />
+    <link rel="stylesheet" href="./CSS/footer.css" />
+    <link rel="stylesheet" href="./CSS/lienhe.css" />
+    <link rel="stylesheet" href="./CSS/reset.css" />
+    <link rel="stylesheet" href="./CSS/uudai.css">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
+    />
+  </head>
+  <body style="background-color: #f9f9f9">
+    <!-- Phần đầu -->
+    <header>
+      <nav class="navbar container-fluid" id="nav">
+        <div class="row align-items-center w-100 g-0">
+
+          <div class="col-7 col-md-1">
+            <a class="navbar-brand" href="#">
+              <img src="./IMG/logo.png" alt="Logo" />
+            </a>
+          </div>
+
+          <div class="col-12 col-md-3 d-none d-md-block">
+            <div class="search-box d-flex">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Hôm nay bạn muốn ăn gì..."
+              />
+              <button class="search">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 d-none d-md-block">
+            <div
+              class="row link justify-content-center align-items-center g-0"
+              id="link"
+            >
+              <div class="col-auto link-wrapper">
+                <a href="./index.html" class="link">
+                  <i class="fas fa-home"></i> Trang chủ
+                </a>
+              </div>
+              <div class="col-auto link-wrapper">
+                <a href="#" class="link">
+                  <i class="fas fa-info-circle"></i> Giới thiệu
+                </a>
+              </div>
+              <div class="col-auto link-wrapper">
+                <a href="#" class="link" active>
+                  <i class="fas fa-gift"></i> Ưu đãi
+                </a>
+              </div>
+              <div class="col-auto link-wrapper">
+                <a href="./tintuc.html" class="link">
+                  <i class="fas fa-bullhorn"></i> Tin tức
+                </a>
+              </div>
+              <div class="col-auto link-wrapper">
+                <a href="./lienhe.html" class="link">
+                  <i class="fas fa-envelope"></i> Liên hệ
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-2 d-none d-md-flex text-end">
+            <div class="auth-container text-end">
+              <button class="button_login" id="login-btn">Đăng nhập</button>
+              <button class="button_register">Đăng ký</button>
+              <div
+                id="user-menu"
+                class="d-none rounded-pill border-secondary-subtle bg-light shadow"
+              >
+                <img
+                  id="user-avatar"
+                  src=""
+                  alt="User Avatar"
+                  class="rounded-circle"
+                  style="width: 30px; height: 30px; object-fit: cover"
+                />
+                <select
+                  id="user-options"
+                  class="form-select form-select-sm w-auto"
+                >
+                  <option disabled selected>Chọn tùy chọn</option>
+                  <option value="account">Tài khoản</option>
+                  <option value="logout">Đăng xuất</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5 d-md-none text-end">
+            <button id="hamburger-btn" class="btn btn-outline-secondary">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div id="mobile-menu" class="d-md-none" style="display: none">
+      <div class="search-box mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Hôm nay bạn muốn ăn gì..."
+        />
+        <button class="search">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="#" class="d-block py-2">Trang chủ</a>
+        <a href="#" class="d-block py-2">Giới thiệu</a>
+        <a href="#" class="d-block py-2">Ưu đãi</a>
+        <a href="#" class="d-block py-2">Tin tức</a>
+        <a href="#" class="d-block py-2">Liên hệ</a>
+      </nav>
+      <div class="mobile-auth">
+        <button class="button_login w-100 mb-2" id="mobile-login-btn">
+          Đăng nhập
+        </button>
+        <button class="button_register w-100" id="mobile-register-btn">
+          Đăng ký
+        </button>
+        <div id="mobile-user-menu" class="d-none d-flex align-items-center">
+          <img
+            id="mobile-user-avatar"
+            src=""
+            alt="User Avatar"
+            class="rounded-circle"
+            style="
+              width: 40px;
+              height: 40px;
+              object-fit: cover;
+              margin-right: 10px;
+            "
+          />
+          <div class="dropdown">
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              id="mobile-user-dropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span id="mobile-username"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="mobile-user-dropdown">
+              <li>
+                <a class="dropdown-item" href="./taikhoan.html">Tài khoản</a>
+              </li>
+              <li>
+                <a class="dropdown-item" id="mobile-logout" href="#"
+                  >Đăng xuất</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="banner">
+      <img src="./IMG/uudaibanner.jpg" alt="Banner" style="width: 100%; height: auto; object-fit: cover; max-width: 100%; margin: 0; padding: 0;" />
+    </section>
+    <!-- -->
+    <div class="container-fluid my-5 py-1">
+      <div class="content-wrapper">
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Tài khoản</li>
+              </ol>
+          </nav>
+
+          <!-- Title -->
+          <h1 class="text-left mb-4">Ưu Đãi</h1>
+      </div>
+
+      <div class="container-fluid my-5 py-1" id="offers-container" style="display: flex; justify-content: center; align-items: center">
+        <!-- data -->
+      </div>
+
+      <!-- Pagination -->
+      <nav aria-label="Page navigation">
+        <ul class="custom-pagination">
+            <li class="pagination-item"><a href="#" class="pagination-link">1</a></li>
+            <li class="pagination-item"><a href="#" class="pagination-link">2</a></li>
+            <li class="pagination-item active"><a href="#" class="pagination-link">3</a></li>
+        </ul>
+    </nav>
+  </div>
+
+    <!-- Liên hệ -->
+    <div class="contact-icon">
+      <img src="./IMG/contact.png" alt="Contact" class="img-fluid" />
+    </div>
+
+    <!-- Form đăng nhập -->
+    <div id="login-modal" class="modal-overlay" style="display: none">
+      <div id="login-content" class="container">
+        <button class="close-btn" id="close-modal">&times;</button>
+        <div class="login-header">
+          <img src="./IMG/logo.png" alt="Logo" class="modal-logo" />
+        </div>
+        <div class="login-body">
+          <form id="form" class="row">
+            <div class="form-group col-12">
+              <input
+                type="text"
+                placeholder="Tên đăng nhập"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="form-group col-12">
+              <input
+                type="password"
+                placeholder="Mật khẩu"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="button_submit">Đăng nhập</button>
+            </div>
+          </form>
+          <div class="login-footer">
+            <a href="#">Quên mật khẩu?</a>
+            <a href="#">Đăng ký</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thương hiệu -->
+    <footer class="footer d-flex flex-column">
+      <div
+        class="brand-container"
+        style="
+          box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+          background-color: #fff;
+        "
+      >
+        <div
+          class="brand-logos container-fluid px-3 py-4"
+          style="max-width: 75%"
+        >
+          <div class="row justify-content-between align-items-center">
+            <div class="col-6 col-md-2 text-center">
+              <img src="./IMG/Loreal.png" alt="L'Oreal" class="img-fluid" />
+            </div>
+            <div class="col-6 col-md-2 text-center">
+              <img src="./IMG/Dove.png" alt="Dove" class="img-fluid" />
+            </div>
+            <div class="col-6 col-md-2 text-center">
+              <img src="./IMG/nyx.png" alt="NYX" class="img-fluid" />
+            </div>
+            <div class="col-6 col-md-2 text-center">
+              <img src="./IMG/revlon.png" alt="Revlon" class="img-fluid" />
+            </div>
+            <div class="col-6 col-md-2 text-center">
+              <img src="./IMG/benefit.png" alt="Benefit" class="img-fluid" />
+            </div>
+            <div class="col-6 col-md-2 text-center">
+              <img src="./IMG/olay.png" alt="Olay" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mb-4" style="background-color: #222222">
+        <div class="row justify-content-center ml-4 pt-4 pb-4">
+          <!-- Liên hệ -->
+          <div class="col-md-3">
+            <h5>LIÊN HỆ</h5>
+            <ul class="inner-content">
+              <li>
+                <img
+                  src="./icon/loc.png"
+                  alt=""
+                  style="width: 16px; vertical-align: middle"
+                />
+                58 Tô Hiệu, Thanh Xuân, Hà Nội
+              </li>
+              <li>
+                <img
+                  src="./icon/phone.png"
+                  alt=""
+                  style="width: 16px; vertical-align: middle"
+                />
+                (024).3783.5639
+              </li>
+              <li>
+                <img
+                  src="./icon/email.png"
+                  alt=""
+                  style="width: 16px; vertical-align: middle"
+                />
+                info@adcvietnam.net
+              </li>
+              <li>
+                <img
+                  src="./icon/web.png"
+                  alt=""
+                  style="width: 16px; vertical-align: middle"
+                />
+                www.adcvietnam.net
+              </li>
+            </ul>
+          </div>
+
+          <!-- Về Leskin -->
+          <div class="col-md-3">
+            <h5>VỀ LESKIN</h5>
+            <ul class="inner-content">
+              <li>Về chúng tôi</li>
+              <li>Sứ mệnh</li>
+              <li>Tăng trưởng</li>
+              <li>Quan hệ cổ đông</li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 app">
+            <h5>TẢI APP NGAY</h5>
+            <a href="#" class="d-block mb-2">
+              <img
+                src="./IMG/gg.png"
+                alt="Google Play"
+                style="width: 150px; margin-bottom: 10px"
+              />
+            </a>
+            <a href="#" class="d-block">
+              <img
+                src="./IMG/appstore.png"
+                alt="App Store"
+                style="width: 150px"
+              />
+            </a>
+          </div>
+
+          <div class="col-md-3 signup">
+            <h5>NEWSLETTER</h5>
+            <h6>Đăng ký để nhận ưu đãi hàng tháng</h6>
+            <form class="d-flex inner-form">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Nhập email"
+              />
+              <button type="submit" class="btn btn-secondary">></button>
+            </form>
+            <div class="inner-menu">
+              <a href="#" class="me-2"
+                ><img src="./icon/facebook.png" alt="Facebook"
+              /></a>
+              <a href="#"><img src="./icon/youtube.png" alt="YouTube" /></a>
+              <a href="#"><img src="./icon/instagram.png" alt="Instagram" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center bg-black m-0 py-4">
+        <div class="col-12">
+          <p class="text-white my-0">© 2019 Leskin. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Nội dung -->
+    <script>
+      // renderCards.js
+document.addEventListener("DOMContentLoaded", () => {
+  // Mảng chứa dữ liệu cho các card (dựa trên ảnh)
+  const offers = [
+    {
+      link: "Xóa Nhàn Vũng Mất, Trấn, Cau May, Khỏe Mừng 1 Lần Duy Nhất...",
+      date: "05/07/19 - 31/08/19",
+      logo: "./IMG/uu-dailogo.jpg",
+      img: "./IMG/brand-1.jpg",
+    },
+    {
+      link: "Xóa Nhàn Vũng Mất, Trấn, Cau May, Khỏe Mừng 1 Lần Duy Nhất...",
+      date: "05/07/19 - 31/08/19",
+      logo: "./IMG/uu-dailogo.jpg",
+      img: "./IMG/brand-1.jpg",
+    },
+    {
+      link: "Xóa Nhàn Vũng Mất, Trấn, Cau May, Khỏe Mừng 1 Lần Duy Nhất...",
+      date: "05/07/19 - 31/08/19",
+      logo: "./IMG/uu-dailogo.jpg",
+      img: "./IMG/brand-1.jpg",
+    },
+    {
+      link: "Xóa Nhàn Vũng Mất, Trấn, Cau May, Khỏe Mừng 1 Lần Duy Nhất...",
+      date: "05/07/19 - 31/08/19",
+      logo: "./IMG/uu-dailogo.jpg",
+      img: "./IMG/brand-1.jpg",
+    },
+    {
+      link: "Xóa Nhàn Vũng Mất, Trấn, Cau May, Khỏe Mừng 1 Lần Duy Nhất...",
+      date: "05/07/19 - 31/08/19",
+      logo: "./IMG/uu-dailogo.jpg",
+      img: "./IMG/brand-1.jpg",
+    },
+    {
+      link: "Xóa Nhàn Vũng Mất, Trấn, Cau May, Khỏe Mừng 1 Lần Duy Nhất...",
+      date: "05/07/19 - 31/08/19",
+      logo: "./IMG/uu-dailogo.jpg",
+      img: "./IMG/brand-1.jpg",
+    },
+    {
+      link: "Xóa Nhàn Vũng Mất, Trấn, Cau May, Khỏe Mừng 1 Lần Duy Nhất...",
+      date: "05/07/19 - 31/08/19",
+      logo: "./IMG/uu-dailogo.jpg",
+      img: "./IMG/brand-1.jpg",
+    },
+    {
+      link: "Xóa Nhàn Vũng Mất, Trấn, Cau May, Khỏe Mừng 1 Lần Duy Nhất...",
+      date: "05/07/19 - 31/08/19",
+      logo: "./IMG/uu-dailogo.jpg",
+      img: "./IMG/brand-1.jpg",
+    },
+    {
+      link: "Xóa Nhàn Vũng Mất, Trấn, Cau May, Khỏe Mừng 1 Lần Duy Nhất...",
+      date: "05/07/19 - 31/08/19",
+      logo: "./IMG/uu-dailogo.jpg",
+      img: "./IMG/brand-1.jpg",
+    },
+  ];
+
+  
+  // Lấy container để render bằng ID
+  const container = document.querySelector("#offers-container");
+
+  // Tạo chuỗi HTML cho tất cả các card
+  let cardsHTML = "";
+    offers.forEach((offer) => {
+        cardsHTML += `
+            <div class="col">
+                <div class="card h-100" style="position: relative;">
+                    <div class="card-img-wrapper">
+                        <img src="${offer.img}" class="card-img-top" alt="${offer.link}">
+                    </div>
+                    <img src="${offer.logo}" class="card-logo rounded-circle shadow-lg" alt="${offer.link} Logo">
+                    <div class="card-body">
+                        <h5 class="card-title mt-5">${offer.link}</h5>
+                        <div class="d-flex align-items-center justify-content-between date-button">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span class="card-date ms-1">${offer.date}</span>
+                            </div>
+                            <a href="${offer.link}" class="btn btn-outline-warning rounded-pill">Xem thêm ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+  });
+
+  // Tạo row và append toàn bộ HTML một lần
+  const row = document.createElement("div");
+  row.className = "row row-cols-1 row-cols-md-3 g-4";
+  row.innerHTML = cardsHTML;
+
+  // Thêm row vào container
+  container.appendChild(row);
+});
+
+    </script>
+
+
+   <!-- Mở đăng nhập -->
+   <script>
+    $(document).ready(function () {
+      $("#login-btn, #mobile-menu .button_login").on("click", function () {
+        $("#login-modal").fadeIn(); 
+        $("#mobile-menu").slideUp(); 
+      });
+  
+      $("#close-modal").on("click", function () {
+        $("#login-modal").fadeOut(); 
+      });
+  
+      $(window).on("click", function (e) {
+        if ($(e.target).is("#login-modal")) {
+          $("#login-modal").fadeOut();
+        }
+      });
+  
+      $("#hamburger-btn").on("click", function () {
+        $("#mobile-menu").slideToggle(); 
+      });
+  
+      $(window).on("resize", function () {
+        if ($(window).width() > 768) {
+          $("#mobile-menu").hide();
+        }
+      });
+    });
+  </script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"
+    ></script>
+  </body>
+</html>

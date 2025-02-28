@@ -1,0 +1,179 @@
+.footer {
+  background-color: #222222;
+}
+
+.footer .container {
+  max-width: 100%;
+  padding: 0 150px; 
+  margin: 0 auto; 
+}
+
+
+.footer .container .inner-content li {
+  color: rgb(122, 122, 122);
+  margin-bottom: 5px;
+}
+
+.footer .container h5 {
+  color: #b7b7b7;
+  margin-bottom: 1rem;
+}
+.footer .container h6{
+  color: #b7b7b7;
+}
+.footer .container .inner-content {
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.footer .app a {
+  overflow: hidden;
+}
+
+.footer .app img {
+  border-radius: 1rem;
+  max-width: 100%;
+}
+
+.footer .signup a {
+  margin-right: 1rem;
+}
+
+.footer .inner-menu {
+  margin-top: 1rem;
+}
+
+.footer .inner-form {
+  background-color: #393939;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+}
+
+.footer .inner-form {
+  background-color: #393939;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+}
+
+.footer .inner-form input {
+  background-color: #393939;
+  color: #fff;
+  border-right: 1px solid #555; 
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  padding: 10px 15px;
+  flex-grow: 1;
+  font-size: 14px;
+  border-radius: 0;
+}
+
+
+.footer .inner-form input::placeholder {
+  color: #bbb;
+}
+
+.footer .inner-form button {
+  background-color: #393939;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .footer .container {
+    padding: 0 50px; 
+  }
+
+  .footer .row {
+    justify-content: space-around; 
+  }
+
+  .footer .col-md-3 {
+    flex: 0 0 30%; 
+    max-width: 30%;
+    margin-bottom: 20px; 
+  }
+
+  .footer h5, .footer h6 {
+    font-size: 1rem; 
+  }
+}
+@media (max-width: 767px) {
+  .footer .container {
+    padding: 0 15px; 
+  }
+
+  .footer .row {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .footer .col-md-3 {
+    flex: 0 0 100%; 
+    max-width: 100%;
+    margin-bottom: 30px; 
+    text-align: center;
+  }
+
+  .footer .app img, .footer .signup img {
+    margin: 0 auto;
+  }
+  .contact-icon img {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .contact-icon {
+    position: fixed;
+    bottom: 50px; 
+    left: auto; 
+    right: 10px; 
+    z-index: 1000; 
+  }
+
+}
+.footer h5 {
+  position: relative; 
+  color: #fff; 
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.footer h5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px; 
+  height: 3px;
+  background-color: #ECB847; 
+  transform: translateY(-10px); 
+}
+.contact-icon {
+  position: fixed;
+  bottom: 40px; 
+  left: 40px; 
+  z-index: 1000; 
+}
+
+.contact-icon img {
+  width: 80px; 
+  height: 80px;
+  border-radius: 50%; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;  
+}

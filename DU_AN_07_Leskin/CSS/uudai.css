@@ -1,0 +1,258 @@
+.content-wrapper {
+    width: 80%; 
+    padding: 20px; 
+    margin: 0 auto; 
+}
+
+#offers-container {
+    width: 80%;
+    padding: 20px;
+    margin-top:0 !important;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-logo {
+    max-width: 100px;
+    height: auto;
+    top: 60%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-date {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.btn-outline-warning {
+    font-size: 0.9rem;
+    padding: 5px 15px;
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: #6c757d;
+}
+
+.breadcrumb-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: #0056b3;
+}
+
+.breadcrumb-item.active {
+    color: #333;
+}
+
+/* Title Styles */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Tablet screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        width: 90%; /* Match #offers-container width */
+        padding: 15px; /* Match #offers-container padding */
+    }
+
+    #offers-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    .card-logo {
+        max-width: 80px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-date {
+        font-size: 0.8rem;
+    }
+
+    .btn-outline-warning {
+        font-size: 0.8rem;
+        padding: 4px 12px;
+    }
+
+    .row-cols-md-3 {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    /* Adjust breadcrumb and title for tablets */
+    .breadcrumb {
+        padding: 8px 12px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .content-wrapper {
+        width: 95%; /* Match #offers-container width */
+        padding: 10px; /* Match #offers-container padding */
+    }
+
+    #offers-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+
+    .card-title {
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+
+    .card-date {
+        font-size: 0.7rem;
+    }
+
+    .btn-outline-warning {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+    }
+
+    .row-cols-md-3 {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .date-button {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .card-logo {
+        height: auto;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        max-width: 70px;
+    }
+
+    /* Adjust breadcrumb and title for mobile */
+    .breadcrumb {
+        padding: 6px 10px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+}
+/* Custom Pagination Styles */
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.pagination-item {
+    margin: 0 5px;
+}
+
+.pagination-link {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+   
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination-link:hover {
+    background-color: #f8f9fa;
+    color: #0056b3;
+}
+
+.pagination-item.active .pagination-link {
+    background-color: #ECB847; /* Màu cam cho nút active, giống trong ảnh */
+    border-color: #ECB847;
+    color: #fff;
+}
+
+/* Tablet screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .pagination-link {
+        width: 30px;
+        height: 30px;
+        line-height: 25px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .pagination-link {
+        width: 30px;
+        height: 30px;
+        line-height: 20px;
+        font-size: 0.8rem;
+    }
+}

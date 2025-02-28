@@ -1,0 +1,95 @@
+
+
+#banner {
+  width: 100%; 
+  overflow: hidden;
+}
+
+#banner img {
+  width: 100%; 
+  height: auto; 
+  display: block; 
+}
+/* //dịch vụ */
+
+h6 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+body {
+  width: 100%;
+}
+/* //thuong hieu */
+.brand-logos {
+  background-color: #ffffff;
+}
+.brand-logos img {
+  max-height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+.brand-logos img:hover {
+  transform: scale(1.1);
+}
+.slick-carousel .slick-slide {
+  padding: 0 15px; /* Tạo khoảng cách giữa các card */
+}
+
+.slick-list {
+  margin: 0 -15px; /* Đảm bảo căn giữa đúng với lề */
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3.position-relative {
+  display: inline-block;
+
+  color: #333; /* Màu chữ */
+}
+
+h3.position-relative::before {
+  content: "";
+  display: block;
+  width: 60px; 
+  height: 3px;
+  background-color: #ecb847; 
+  position: absolute;
+  top: -10px; 
+  left: 0; 
+}
+.card-text {
+  color: #555;
+  font-size: 14px;
+}
+
+.card-body .btn {
+  font-size: 14px;
+}
+.btn-outline-warning {
+  color: #ecb847; 
+  border: 1px solid #ecb847; 
+  background-color: transparent; 
+}
+
+.btn-outline-warning:hover {
+  background-color: #ecb847; 
+  color: #fff; 
+  transition: all 0.3s ease; 
+}
+.btn-warning .fas {
+  font-size: 12px; 
+}
+
+.container-brand{
+  padding: 6rem;
+  margin: 0 16rem;
+}
+.contact-icon img:hover {
+  transform: scale(1.1); /* Phóng to khi hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
